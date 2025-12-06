@@ -1,0 +1,48 @@
+// See: https://www.youtube.com/watch?v=EKHd0Dcc4IY
+@use "sass:list";
+:root {
+  --pure-primary: #27363b;
+  --pure-secondary: #333333;
+  --pure-accent-teal: #75b2ad;
+  --pure-accent-green: #80a879;
+  --pure-accent-light-green: #b1d4ac;
+  --pure-accent-grey: #637b81;
+  --pure-neutral-light: #f5f5f5;
+  --pure-neutral-dark: #222a2f;
+  --pure-primary-bg: #425e5e;
+  --pure-secondary-bg: $pure-primary;
+}
+// $simple-gradient: $pure-primary, $pure-secondary;
+// $complex-gradient: $pure-primary, $pure-secondary, $pure-accent-teal;
+
+// $scheme-default: $pure-neutral-light, $pure-primary;
+// $scheme-secondary: $pure-neutral-dark, $pure-secondary;
+// $scheme-accent-gradient: $pure-neutral-dark, $complex-gradient;
+// $scheme-simple-gradient: $pure-neutral-dark, $simple-gradient;
+
+// @mixin color-scheme($text, $bg) {
+//   // if we have a single bg color, then set a background-color
+//   // and if we have multiple bg colors, set a gradient
+//   @if list.length($bg) == 1 {
+//     background-color: $bg;
+//   } @else {
+//     background-image: linear-gradient(to top left, $bg);
+//   }
+//   color: $text;
+// }
+
+// .example-1 {
+//   @include color-scheme($scheme-simple-gradient...);
+// }
+
+// .example-2 {
+//   @include color-scheme(white, (purple, #121212, blue));
+// }
+
+// // general styling
+// [class*="example-"] {
+//   height: 30vh;
+//   // display: grid;
+//   // place-items: center;
+//   font-weight: bold;
+// }

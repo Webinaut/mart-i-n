@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "mart.i.n",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.15.5"
+    "animejs": "^4.2.2",
+    "astro": "^5.15.5",
+    "normalize.css": "^8.0.1",
+    "purecss-sass": "^3.0.1",
+    "sass": "^1.94.0"
   }
 }

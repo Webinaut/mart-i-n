@@ -1,0 +1,26 @@
+---
+import Image from "astro/components/Image.astro";
+import mountain from "../images/mountain.svg";
+---
+
+<footer>
+  <Image src={mountain} alt="mountain" />
+  <p class="vic">Made in the Victorian High Country</p>
+  <p>Copyright &copy; 2025 Mart.I.N</p>
+</footer>
+<style lang="scss">
+  footer {
+    padding: 25px;
+    text-align: center;
+    min-height: 20vh;
+    background-color: var(--pure-primary);
+    & p {
+      color: var(--pure-neutral-light);
+      &.vic {
+        font-family: "Playfair Display, serif";
+        font-size: 1.5em;
+        font-style: oblique;
+      }
+    }
+  }
+</style>

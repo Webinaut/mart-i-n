@@ -1,0 +1,29 @@
+---
+import "../styles/main.scss";
+import Header from "../components/Header.astro";
+import Why from "../components/Why.astro";
+import Benefits from "../components/Benefits.astro";
+import Organisation from "../components/Organisation.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/mart-i-n-favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <Why />
+    <Benefits />
+    <Organisation />
+    <Contact />
+    <Footer />
+    <slot />
+  </body>
+</html>

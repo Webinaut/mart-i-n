@@ -1,0 +1,52 @@
+---
+import Image from "astro/components/Image.astro";
+import ui from "../images/ui.svg";
+import branding from "../images/branding.svg";
+import marketing from "../images/marketing.svg";
+import revenue from "../images/revenue.svg";
+---
+
+<main class="section-wrapper">
+  <section class="section-content">
+    <div class="headline-wrapper">
+      <h1>The Benefits to You</h1>
+    </div>
+    <div class="pure-g">
+      <p class="pure-u-md-1-4">
+        <Image src={ui} alt="ui" /><br />Enhanced User Experience (UX)
+      </p>
+      <p class="pure-u-md-1-4">
+        <Image src={branding} alt="branding" /><br />Stronger Brand Perception &
+        Trust
+      </p>
+      <p class="pure-u-md-1-4">
+        <Image src={marketing} alt="marketing" /><br />Improved Marketing & SEO
+        Performance
+      </p>
+      <p class="pure-u-md-1-4">
+        <Image src={revenue} alt="revenue" /><br />Increased Conversions &
+        Revenue
+      </p>
+    </div>
+    <style lang="scss">
+      .section-wrapper {
+        padding-bottom: 60px;
+      }
+      .section-content {
+        width: 80%;
+        margin: auto;
+      }
+      .headline-wrapper > h1 {
+        text-align: center;
+        margin-top: 2em;
+        font-size: 3.6em;
+      }
+      .pure-g {
+        margin: 4em 0;
+        & p {
+          text-align: center;
+        }
+      }
+    </style>
+  </section>
+</main>

@@ -1,0 +1,157 @@
+---
+import "../styles/main.scss";
+import Image from "astro/components/Image.astro";
+import Computerframe from "../images/computer.png";
+import slide1 from "../images/03.png";
+import slide2 from "../images/06.png";
+
+const framedImages = [
+  {
+    src: slide1,
+    alt: "slide1",
+    width: 1535,
+    height: 955,
+    class: "slide-image",
+  },
+  {
+    src: slide2,
+    alt: "slide2",
+    width: 1535,
+    height: 955,
+    class: "slide-image",
+  },
+];
+---
+
+<div class="top"><h1>Top Box</h1></div>
+<div class="middle">
+  <h1>Middle Box</h1>
+  <div class="image-wrapper">
+    <div class="image-frame">
+      <Image src={Computerframe} alt="Computer Frame" />
+    </div>
+    {
+      framedImages.map((image) => (
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          class={image.class}
+        />
+      ))
+    }
+  </div>
+
+  <div class="curved-border">
+    <svg class="curve" viewBox="0 0 1440 133" preserveAspectRatio="none">
+      <g>
+        <path
+          id="path-1"
+          d="M-0,72s180-36.13230792814181 360-0 180-136.8176787775407 360-0 180-111.71350672592155 360-0 180-16.099548216277995 360-0 V144H-1440Z"
+          fill="#425E5E"></path>
+        <path
+          id="path-2"
+          d="M-0,72s180-111.8581060065802 360-0 180-15.871579969997365 360-0 180-129.00900851770052 360-0 180-123.53614958975476 360-0 V144H-1440Z"
+          fill="#425E5E"
+          style="opacity: 0;"></path>
+      </g>
+    </svg>
+  </div>
+  <div class="bottom"><h1>Bottom Box</h1></div>
+
+  <style lang="scss">
+    body {
+      margin: 0;
+    }
+    .image-wrapper {
+      position: relative;
+      margin: auto;
+      width: 80%;
+      & .image-frame {
+        text-align: center;
+        > img {
+          max-width: 80%;
+          max-height: fit-content;
+        }
+      }
+
+      & .slide-image {
+        max-width: 80%;
+        max-height: fit-content;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+    }
+    .curved-border {
+      position: relative;
+      background: var(--pure-secondary-bg);
+      padding-bottom: 8rem;
+    }
+    .curve {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 132px;
+      color: var(--pure-primary-bg);
+    }
+    .top,
+    .middle,
+    .bottom {
+      background: var(--pure-accent-grey);
+      padding-top: 2em;
+      min-height: 400px;
+      margin: 0;
+      > h1 {
+        text-align: center;
+      }
+    }
+    .middle {
+      background: var(--pure-accent-light-green);
+    }
+    .bottom {
+      background: var(--pure-accent-green);
+    }
+  </style>
+  <script>
+    import { onScroll, animate, svg, utils, stagger, linear } from "animejs";
+    const [$path1, $path2] = utils.$("path");
+    function animateCurve() {
+      // Morph #path-1 into #path-2
+      animate($path1, {
+        d: svg.morphTo($path2),
+        ease: linear(0, "0.5 50%", "0.7 75%", 1),
+        duration: 3000,
+        // loop: true,
+        alternate: true,
+        autoplay: onScroll({
+          container: "curved-border",
+          sync: true,
+          enter: "max bottom",
+          leave: "min top",
+          debug: true,
+        }),
+      });
+    }
+    animateCurve();
+
+    function animateImagesSequentially() {
+      animate(".slide-image", {
+        // Select all images
+        opacity: [0, 1], // Animate from opacity 0 to 1
+        duration: 1000, // Duration of each individual fade in (ms)
+        delay: stagger(5000, { start: 100 }),
+        easing: "easeInOutQuad",
+        loop: true, // Loop the animation
+        direction: "alternate", // Reverse the animation back
+        // Optionally, add a loop delay or other properties
+        loopDelay: 5000,
+      });
+    }
+    animateImagesSequentially();
+  </script>
+</div>
