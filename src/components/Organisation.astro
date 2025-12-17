@@ -361,211 +361,209 @@ import Search from "../images/search.svg";
         <p class="organisation-text">Missing your Organisation?</p>
         <p><a href="#contact">Please get in touch</a></p>
       </div>
-
-      <div class="curved-border">
-        <svg
-          class="curve"
-          viewBox="0 0 1440 133"
-          preserveAspectRatio="none"
-          style="background-color: #27363B;"
-        >
-          <g>
-            <path
-              id="path-3"
-              d="M-0,72s180-36.13230792814181 360-0 180-136.8176787775407 360-0 180-111.71350672592155 360-0 180-16.099548216277995 360-0 V144H-1440Z"
-              fill="#f5f5f5"></path>
-            <path
-              id="path-4"
-              d="M-0,72s180-111.8581060065802 360-0 180-15.871579969997365 360-0 180-129.00900851770052 360-0 180-123.53614958975476 360-0 V144H-1440Z"
-              fill="#f5f5f5"
-              style="opacity: 0;"></path>
-          </g>
-        </svg>
-      </div>
-
-      <style lang="scss">
-        .white {
-          color: var(--pure-neutral-light);
-        }
-        .teal {
-          color: var(--pure-accent-teal);
-        }
-        .org-wrapper {
-          padding: 4em 0;
-          text-align: center;
-        }
-        .overlay {
-          & button.round {
-            background: var(--pure-primary);
-            justify-self: left;
-          }
-          visibility: hidden;
-          opacity: 0;
-          pointer-events: none;
-          &:target {
-            visibility: visible;
-            opacity: 1;
-            pointer-events: auto;
-          }
-          transition: all 0.3s;
-          position: fixed;
-          z-index: 2;
-          width: 60%;
-          min-width: 310px;
-          max-width: 750px;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          padding: 40px;
-          display: flex;
-          flex-direction: column;
-          background: var(--pure-neutral-light);
-          border-radius: 10px;
-          & .title-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
-          & p {
-            text-align: left;
-          }
-        }
-        .shadow {
-          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-        }
-        .title-wrapper img {
-          width: 100px;
-          height: 100px;
-        }
-        .section-wrapper {
-          position: relative;
-          background-color: var(--pure-primary);
-          padding: 0 0 0 0;
-          margin: 0;
-        }
-        .section-content {
-          width: 80%;
-          margin: auto;
-        }
-        .headline-wrapper {
-          padding-top: 3em;
-          > h1 {
-            align-content: center;
-            font-size: 4em;
-          }
-          > p {
-            align-content: center;
-          }
-        }
-        .org-frame {
-          margin-bottom: 2em;
-          & img {
-            width: 64px;
-            height: 64px;
-          }
-          & p > a {
-            color: var(--pure-accent-teal);
-            text-decoration: none;
-            font-weight: 600;
-          }
-        }
-        .organisation-text {
-          color: var(--pure-neutral-light);
-          font-family: "Playfair Display", serif;
-          font-weight: 700;
-        }
-        button.round {
-          border-radius: 9999px;
-
-          background: var(--pure-accent-teal);
-          color: var(--pure-neutral-light);
-          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-          border: none;
-          padding: 7px;
-          margin: 0;
-          width: 48px;
-          min-width: 48px;
-          height: 48px;
-          margin-top: 10px;
-          display: flex;
-
-          justify-self: center;
-        }
-        .light_bg {
-          background-color: var(--pure-accent-teal);
-        }
-        .curved-border {
-          position: relative;
-          background: var(--pure-secondary-bg);
-          padding-bottom: 8rem;
-        }
-        .curve {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          max-width: 100vw;
-          height: 132px;
-          color: var(--pure-primary-bg);
-        }
-        @media screen and (max-width: 768px) {
-          .headline-wrapper h1 {
-            font-size: 3em;
-          }
-          .curve {
-            height: 36px;
-          }
-          .curved-border {
-            padding-bottom: 2rem;
-          }
-        }
-      </style>
-      <script>
-        import { onScroll, animate, svg, linear, stagger } from "animejs";
-        const path3 = document.getElementById("path-3");
-        const path4 = document.getElementById("path-4");
-        function animateCurve() {
-          // Morph #path-1 into #path-2
-          animate(path3, {
-            d: svg.morphTo(path4),
-            ease: linear(0, "0.5 50%", "0.7 75%", 1),
-            duration: 3000,
-            alternate: true,
-            autoplay: onScroll({
-              container: "curved-border",
-              sync: 1,
-              enter: "max bottom",
-              leave: "min top",
-            }),
-          });
-        }
-        animateCurve();
-        function animateImagesSequentially() {
-          animate(".org-frame", {
-            // Select all images
-            // opacity: [0, 1], // Animate from opacity 0 to 1
-            y: [-100, 0],
-            scale: [0, 1],
-            duration: 800, // Duration of each individual fade in (ms)
-            delay: stagger(100, { start: 100 }),
-            // ease: "easeInOutQuad",
-            // ease: "InOutExpo",
-
-            autoplay: onScroll({
-              sync: "play pause pause reset",
-              // enter: "bottom top",
-              // leave: "top bottom",
-              enter: "bottom-=50 top",
-              leave: "top+=60 bottom",
-            }),
-            // loop: true, // Loop the animation
-            // direction: "alternate", // Reverse the animation back
-            // Optionally, add a loop delay or other properties
-            // loopDelay: 1000,
-          });
-        }
-        animateImagesSequentially();
-      </script>
     </div>
   </div>
+  <div class="curved-border">
+    <svg
+      class="curve"
+      viewBox="0 0 1440 133"
+      preserveAspectRatio="none"
+      style="background-color: #27363B;"
+    >
+      <g>
+        <path
+          id="path-3"
+          d="M-0,72s180-36.13230792814181 360-0 180-136.8176787775407 360-0 180-111.71350672592155 360-0 180-16.099548216277995 360-0 V144H-1440Z"
+          fill="#f5f5f5"></path>
+        <path
+          id="path-4"
+          d="M-0,72s180-111.8581060065802 360-0 180-15.871579969997365 360-0 180-129.00900851770052 360-0 180-123.53614958975476 360-0 V144H-1440Z"
+          fill="#f5f5f5"
+          style="opacity: 0;"></path>
+      </g>
+    </svg>
+  </div>
 </main>
+<style lang="scss">
+  .white {
+    color: var(--pure-neutral-light);
+  }
+  .teal {
+    color: var(--pure-accent-teal);
+  }
+  .org-wrapper {
+    padding: 4em 0;
+    text-align: center;
+  }
+  .overlay {
+    & button.round {
+      background: var(--pure-primary);
+      justify-self: left;
+    }
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    &:target {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    transition: all 0.3s;
+    position: fixed;
+    z-index: 2;
+    width: 60%;
+    min-width: 310px;
+    max-width: 750px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background: var(--pure-neutral-light);
+    border-radius: 10px;
+    & .title-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    & p {
+      text-align: left;
+    }
+  }
+  .shadow {
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  }
+  .title-wrapper img {
+    width: 100px;
+    height: 100px;
+  }
+  .section-wrapper {
+    position: relative;
+    background-color: var(--pure-primary);
+    padding: 0 0 0 0;
+    margin: 0;
+  }
+  .section-content {
+    width: 80%;
+    margin: auto;
+  }
+  .headline-wrapper {
+    padding-top: 3em;
+    > h1 {
+      align-content: center;
+      font-size: 4em;
+    }
+    > p {
+      align-content: center;
+    }
+  }
+  .org-frame {
+    margin-bottom: 2em;
+    & img {
+      width: 64px;
+      height: 64px;
+    }
+    & p > a {
+      color: var(--pure-accent-teal);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+  .organisation-text {
+    color: var(--pure-neutral-light);
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+  }
+  button.round {
+    border-radius: 9999px;
+
+    background: var(--pure-accent-teal);
+    color: var(--pure-neutral-light);
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    border: none;
+    padding: 7px;
+    margin: 0;
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    margin-top: 10px;
+    display: flex;
+
+    justify-self: center;
+  }
+  .light_bg {
+    background-color: var(--pure-accent-teal);
+  }
+  .curved-border {
+    position: relative;
+    background: var(--pure-secondary-bg);
+    padding-bottom: 8rem;
+  }
+  .curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+    height: 132px;
+    color: var(--pure-primary-bg);
+  }
+  @media screen and (max-width: 768px) {
+    .headline-wrapper h1 {
+      font-size: 3em;
+    }
+    .curve {
+      height: 36px;
+    }
+    .curved-border {
+      padding-bottom: 2rem;
+    }
+  }
+</style>
+<script>
+  import { onScroll, animate, svg, linear, stagger } from "animejs";
+  const path3 = document.getElementById("path-3");
+  const path4 = document.getElementById("path-4");
+  function animateCurve() {
+    // Morph #path-1 into #path-2
+    animate(path3, {
+      d: svg.morphTo(path4),
+      ease: linear(0, "0.5 50%", "0.7 75%", 1),
+      duration: 3000,
+      alternate: true,
+      autoplay: onScroll({
+        container: "curved-border",
+        sync: 1,
+        enter: "max bottom",
+        leave: "min top",
+      }),
+    });
+  }
+  animateCurve();
+  function animateImagesSequentially() {
+    animate(".org-frame", {
+      // Select all images
+      // opacity: [0, 1], // Animate from opacity 0 to 1
+      y: [-100, 0],
+      scale: [0, 1],
+      duration: 800, // Duration of each individual fade in (ms)
+      delay: stagger(100, { start: 100 }),
+      // ease: "easeInOutQuad",
+      // ease: "InOutExpo",
+
+      autoplay: onScroll({
+        sync: "play pause pause reset",
+        // enter: "bottom top",
+        // leave: "top bottom",
+        enter: "bottom-=50 top",
+        leave: "top+=60 bottom",
+      }),
+      // loop: true, // Loop the animation
+      // direction: "alternate", // Reverse the animation back
+      // Optionally, add a loop delay or other properties
+      // loopDelay: 1000,
+    });
+  }
+  animateImagesSequentially();
+</script>
