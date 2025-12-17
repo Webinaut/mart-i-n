@@ -37,22 +37,41 @@
               Full name
               <span class="light">*</span>
             </p>
-            <input placeholder="First and last name" type="text" class="" />
+            <input
+              placeholder="First and last name"
+              name="name"
+              required
+              type="text"
+              class=""
+            />
           </div>
           <div class="pure-u-md-1-3">
             <p class="form-text">
               Email
               <span class="light">*</span>
             </p>
-            <input placeholder="Email address" type="email" class="" />
+            <input
+              placeholder="Email address"
+              type="email"
+              name="email"
+              required
+              class=""
+            />
           </div>
           <div class="pure-u-md-1-3">
             <p class="form-text">Phone</p>
-            <input placeholder="1234 567 890" type="tel" class="valid" />
+            <input
+              placeholder="1234 567 890"
+              type="tel"
+              name="phone"
+              pattern="[0-9]{4} [0-9]{3} [0-9]{3}"
+            />
           </div>
           <div class="pure-u-md-1-2">
-            <p>Message:</p>
-            <textarea class="message" rows="2"></textarea>
+            <label>
+              <p>Message:</p>
+              <textarea class="message" rows="2"></textarea>
+            </label>
           </div>
           <div class="pure-u-md-1-2">
             <p><br /></p>
