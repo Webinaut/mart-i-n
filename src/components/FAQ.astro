@@ -10,33 +10,50 @@
         <span class="white">to your questions</span>
       </h1>
     </div>
-    <div class="question" style="">
-      <div class="js-accordion-btn question--header svelte-1knvpha">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-plus svelte-1knvpha"
-          ><line x1="12" y1="5" x2="12" y2="19" class="svelte-1knvpha"
-          ></line><line x1="5" y1="12" x2="19" y2="12" class="svelte-1knvpha"
-          ></line></svg
-        >
-        <h5 class="svelte-1knvpha">What can I validate?</h5>
+    <div class="faq-wrapper">
+      <div class="faq">
+        <div class="question-header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather"
+            ><line x1="12" y1="5" x2="12" y2="19" class="faq-btn"></line>
+            <line x1="5" y1="12" x2="19" y2="12" class="faq-btn"></line></svg
+          >
+          <h5 class="question">First Question</h5>
+        </div>
+        <div class="question-content">
+          <h5 class="answer">Detailed answer to question 1.</h5>
+        </div>
       </div>
-      <div class="question--content svelte-1knvpha">
-        <h5 class="">
-          You have access to over 100 validation modules ranging from a simple
-          duplicate check, “no contact allowed” checks (Robinson/Nix
-          list/Reservasjonsregister), active e-mail and telephone check to more
-          advanced checks towards public registries and scores using advanced
-          algorithms.
-        </h5>
+      <div class="faq">
+        <div class="question-header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather"
+            ><line x1="12" y1="5" x2="12" y2="19" class="faq-btn"></line>
+            <line x1="5" y1="12" x2="19" y2="12" class="faq-btn"></line></svg
+          >
+          <h5 class="question">Second Question</h5>
+        </div>
+        <div class="question-content">
+          <h5 class="answer">Detailed answer to question 2.</h5>
+        </div>
       </div>
     </div>
   </section>
@@ -45,6 +62,7 @@
 <style lang="scss">
   .section-wrapper {
     background: var(--pure-accent-teal);
+    padding-bottom: 4em;
   }
   .section-content {
     width: 80%;
@@ -70,4 +88,87 @@
   .dark {
     color: var(--pure-secondary);
   }
+  .faq {
+    // opacity: 0;
+  }
+  .question-header {
+    font-size: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+    width: 100%;
+    > svg {
+      align-self: center;
+    }
+    & h5 {
+      margin-left: 0.5em;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+  .faq .question-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .faq.active .question-content {
+    max-height: 500px;
+  }
+  .faq.active .question-header > svg {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  h5.answer {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 0.5em;
+    color: var(--pure-neutral-light);
+    line-height: 1.5em;
+    // display: none;
+    // & .active {
+    //   display: block;
+    // }
+  }
 </style>
+<script>
+  import { onScroll, animate, stagger } from "animejs";
+  function animateFAQ() {
+    animate(".faq", {
+      y: [50, 0],
+      opacity: [0, 1],
+      // scale: [0, 1],
+      // ease: "InOutExpo",
+      delay: stagger(500, {
+        start: 500,
+      }),
+      autoplay: onScroll({
+        sync: "play pause pause reset",
+        enter: "bottom-=50 top",
+        leave: "top+=60 bottom",
+      }),
+    });
+  }
+  animateFAQ();
+
+  // // FAQ Accordion
+  document.addEventListener("click", (e) => {
+    const button = (e.target as Element).closest(".question-header");
+    if (button) {
+      const accordionItem = button.closest(".faq");
+      console.log("closest faq: ", accordionItem);
+      console.log(button);
+      const allItems = document.querySelectorAll(".faq");
+
+      allItems.forEach((item) => {
+        if (item !== accordionItem) {
+          item.classList.remove("active");
+        }
+      });
+
+      accordionItem.classList.toggle("active");
+      console.log(accordionItem.classList);
+    }
+  });
+</script>
