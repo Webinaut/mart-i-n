@@ -10,13 +10,13 @@ import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
   <div class="hero">
     <section class="hero-content">
       <h1 class="logo">Mart.I.N</h1>
-      <nav>
+      <nav class="hdr">
         <ul>
           <li>
-            <a href="#about">Why</a>
+            <a href="#why">Why</a>
           </li>
           <li>
-            <a href="#portfolio">Organisations</a>
+            <a href="#organisations">Organisations</a>
           </li>
           <li>
             <a href="#faq">FAQ</a>
@@ -98,7 +98,7 @@ import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
           you to adopt modern design principles, ensuring your site is fully
           responsive and delivers a seamless user experience across all devices.
         </p>
-        <button class="mart-button-1">Learn how</button>
+        <a href="#why"><button class="mart-button-1">Learn more</button></a>
       </div>
       <div class="image-wrapper"></div>
     </section>
@@ -121,14 +121,12 @@ import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
       margin: auto;
     }
     .section-wrapper {
+      // background: var(--pure-neutral-light);
       width: 100%;
       margin: 0 40px 0 0;
-      padding: 0;
-      padding-bottom: 40px;
+      padding: 20px 0;
+      // padding-bottom: 40px;
       display: block;
-    }
-
-    element.style {
     }
 
     button.round {
@@ -180,10 +178,11 @@ import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
     .hero-content {
       display: flex;
       justify-content: space-between;
-      align-items: top;
+      align-items: start;
       width: 80%;
       margin: auto;
-      margin-top: 60px;
+      // margin-top: 60px;
+      // opacity: 0;
     }
     h1.logo {
       display: flex;
@@ -194,7 +193,8 @@ import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
     }
     .herohead {
       font-weight: 600;
-      font-size: 3.5rem;
+      font-size: 3.7rem;
+      line-height: 1.2em;
     }
     nav {
       & ul {
@@ -268,24 +268,20 @@ import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
     }
   </style>
 </main>
-<!-- <script>
-  // Toggle Hamburger Menu
-  document
-    .querySelector("button.round, mobile-menu-wrapper.expanded")
-    .addEventListener("click", () => {
-      document
-        .querySelector(".mobile-menu-wrapper")
-        .classList.toggle("expanded");
-
-      //   const mobileMenuWrapper = document.querySelector(
-      //     ".mobile-menu-wrapper.expanded"
-      //   );
-
-      //   if (mobileMenuWrapper) {
-      //     console.log("mobileMenuWrapper .expanded found:", mobileMenuWrapper);
-      //   } else {
-      //     console.log("mobileMenuWrapper .expanded not found.");
-      //   }
+<script>
+  import { onScroll, animate } from "animejs";
+  function animateHero() {
+    animate(".hero-content", {
+      y: [0, 40],
+      ease: "InOutExpo",
+      autoplay: onScroll({
+        sync: "play reset play reset",
+        // sync: "resume pause reverse reset",
+        enter: "bottom top",
+        leave: "top bottom",
+      }),
     });
-</script> -->
+  }
+  animateHero();
+</script>
 <script src="../scripts/menu.js"></script>

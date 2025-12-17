@@ -9,7 +9,7 @@ import Search from "../images/search.svg";
 ---
 
 <main id="organisations" class="section-wrapper">
-  <section class="section-content">
+  <div class="section-content">
     <div class="headline-wrapper pure-g">
       <h1 class="pure-u-md-1-2">
         <span class="white">What type of <br /></span>
@@ -19,8 +19,8 @@ import Search from "../images/search.svg";
         Find out how Mart.I.N helps organisations like yours.
       </p>
     </div>
-    <div class="image-wrapper pure-g">
-      <div class="image-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+    <div class="org-wrapper pure-g">
+      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={Club} alt="Sports Clubs" />
         <p class="organisation-text">Sports Clubs</p>
         <!-- <a class="btn" href="#open-modal"></a> -->
@@ -41,52 +41,53 @@ import Search from "../images/search.svg";
             ></button
           ></a
         >
-        <div id="open-modal1" class="overlay shadow">
-          <a href="#organisations">
-            <button class="round"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100%"
-                height="100%"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-x"
-                ><line x1="18" y1="6" x2="6" y2="18"></line><line
-                  x1="6"
-                  y1="6"
-                  x2="18"
-                  y2="18"></line></svg
-              ></button
-            >
-          </a>
-          <div class="title-wrapper">
-            <h1 style="font-size: 2em;">Sports Clubs</h1>
-            <Image src={Club} alt="Sports Club" />
-          </div>
-          <p>
-            A modernised website is crucial for a sports club's success in the
-            digital age, extending far beyond a simple online brochure.
-          </p>
-          <p>
-            One primary reason is to enhance the member experience, making it
-            effortless for them to find schedules, check scores, enter
-            competitions or sign up for memberships on any device through a
-            responsive design.
-          </p>
-          <p>
-            In addition, a modern site leverages current SEO best practices,
-            driving organic traffic and increasing visibility to potential
-            sponsors and new recruits who are searching online. The up-to-date
-            security features and reliable hosting protect sensitive member data
-            and ensure the club's online operations run smoothly and securely.
-          </p>
-        </div>
       </div>
-      <div class="image-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div id="open-modal1" class="overlay shadow">
+        <a href="#organisations">
+          <button class="round"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
+              ><line x1="18" y1="6" x2="6" y2="18"></line><line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"></line></svg
+            ></button
+          >
+        </a>
+        <div class="title-wrapper">
+          <h1 style="font-size: 2em;">Sports Clubs</h1>
+          <Image src={Club} alt="Sports Club" />
+        </div>
+        <p>
+          A modernised website is crucial for a sports club's success in the
+          digital age, extending far beyond a simple online brochure.
+        </p>
+        <p>
+          One primary reason is to enhance the member experience, making it
+          effortless for them to find schedules, check scores, enter
+          competitions or sign up for memberships on any device through a
+          responsive design.
+        </p>
+        <p>
+          In addition, a modern site leverages current SEO best practices,
+          driving organic traffic and increasing visibility to potential
+          sponsors and new recruits who are searching online. The up-to-date
+          security features and reliable hosting protect sensitive member data
+          and ensure the club's online operations run smoothly and securely.
+        </p>
+      </div>
+
+      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={Hospitality} alt="Hospitality" />
         <p class="organisation-text">Hospitality</p>
         <a href="#open-modal2">
@@ -106,57 +107,58 @@ import Search from "../images/search.svg";
             ></button
           >
         </a>
-        <div id="open-modal2" class="overlay shadow">
-          <a href="#organisations">
-            <button class="round"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100%"
-                height="100%"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-x"
-                ><line x1="18" y1="6" x2="6" y2="18"></line><line
-                  x1="6"
-                  y1="6"
-                  x2="18"
-                  y2="18"></line></svg
-              ></button
-            >
-          </a>
-          <div class="title-wrapper">
-            <h1 style="font-size: 2em;">Hospitality</h1>
-            <Image src={Hospitality} alt="Hospitality" />
-          </div>
-          <p>
-            Revamping your hospitality website is essential for commercial
-            success. In particular, it is crucial to ensure a seamless and
-            intuitive mobile experience, as the majority of potential customers
-            browse and make decisions on their smartphones.
-          </p>
-          <p>
-            Secondly, a contemporary design signals professionalism and
-            relevance, directly reflecting the quality and experience of your
-            restaurant; a dated website can suggest that your establishment is
-            similarly behind the times.
-          </p>
-          <p>
-            A modern site should be built for conversion, featuring clear
-            calls-to-action for online reservations and easy access to the menu,
-            often integrating directly with modern POS or booking systems. Also,
-            updating the site is essential for SEO and security, ensuring it
-            ranks well in local searches and protects both your business and
-            customer data with the latest security protocols.
-          </p>
-        </div>
       </div>
-      <div class="image-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div id="open-modal2" class="overlay shadow">
+        <a href="#organisations">
+          <button class="round"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
+              ><line x1="18" y1="6" x2="6" y2="18"></line><line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"></line></svg
+            ></button
+          >
+        </a>
+        <div class="title-wrapper">
+          <h1 style="font-size: 2em;">Hospitality</h1>
+          <Image src={Hospitality} alt="Hospitality" />
+        </div>
+        <p>
+          Revamping your hospitality website is essential for commercial
+          success. In particular, it is crucial to ensure a seamless and
+          intuitive mobile experience, as the majority of potential customers
+          browse and make decisions on their smartphones.
+        </p>
+        <p>
+          Secondly, a contemporary design signals professionalism and relevance,
+          directly reflecting the quality and experience of your restaurant; a
+          dated website can suggest that your establishment is similarly behind
+          the times.
+        </p>
+        <p>
+          A modern site should be built for conversion, featuring clear
+          calls-to-action for online reservations and easy access to the menu,
+          often integrating directly with modern POS or booking systems. Also,
+          updating the site is essential for SEO and security, ensuring it ranks
+          well in local searches and protects both your business and customer
+          data with the latest security protocols.
+        </p>
+      </div>
+      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={Services} alt="Services" />
         <p class="organisation-text">Services</p>
+
         <a href="#open-modal3">
           <button class="round light_bg"
             ><svg
@@ -174,58 +176,59 @@ import Search from "../images/search.svg";
             ></button
           >
         </a>
-        <div id="open-modal3" class="overlay shadow">
-          <a href="#organisations">
-            <button class="round"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100%"
-                height="100%"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-x"
-                ><line x1="18" y1="6" x2="6" y2="18"></line><line
-                  x1="6"
-                  y1="6"
-                  x2="18"
-                  y2="18"></line></svg
-              ></button
-            >
-          </a>
-          <div class="title-wrapper">
-            <h1 style="font-size: 2em;">Services</h1>
-            <Image src={Services} alt="Services" />
-          </div>
-          <p>
-            Modernising a services website is no longer a luxury but a critical
-            business necessity driven by evolving customer expectations and
-            technological advancements.
-          </p>
-          <p>
-            The main reason is the immediate impact on the Total Customer
-            Experience. An outdated, slow, or non-mobile-friendly site
-            frustrates visitors, leading to high bounce rates and lost business
-            opportunities.
-          </p>
-          <p>
-            Also, legacy platforms are often plagued by security vulnerabilities
-            and compliance issues, exposing the business and its client data to
-            substantial risk.
-          </p>
-          <p>
-            Ultimately, this strategic investment reduces long-term maintenance
-            costs and technical debt, ensuring that you, as a service provider,
-            remain competitive and future-proof in the digital marketplace.
-          </p>
-        </div>
       </div>
-      <div class="image-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div id="open-modal3" class="overlay shadow">
+        <a href="#organisations">
+          <button class="round"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
+              ><line x1="18" y1="6" x2="6" y2="18"></line><line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"></line></svg
+            ></button
+          >
+        </a>
+        <div class="title-wrapper">
+          <h1 style="font-size: 2em;">Services</h1>
+          <Image src={Services} alt="Services" />
+        </div>
+        <p>
+          Modernising a services website is no longer a luxury but a critical
+          business necessity driven by evolving customer expectations and
+          technological advancements.
+        </p>
+        <p>
+          The main reason is the immediate impact on the Total Customer
+          Experience. An outdated, slow, or non-mobile-friendly site frustrates
+          visitors, leading to high bounce rates and lost business
+          opportunities.
+        </p>
+        <p>
+          Also, legacy platforms are often plagued by security vulnerabilities
+          and compliance issues, exposing the business and its client data to
+          substantial risk.
+        </p>
+        <p>
+          Ultimately, this strategic investment reduces long-term maintenance
+          costs and technical debt, ensuring that you, as a service provider,
+          remain competitive and future-proof in the digital marketplace.
+        </p>
+      </div>
+      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={NonProfit} alt="Non Profits" />
         <p class="organisation-text">Non Profits</p>
+
         <a href="#open-modal4">
           <button class="round light_bg"
             ><svg
@@ -243,53 +246,54 @@ import Search from "../images/search.svg";
             ></button
           >
         </a>
-        <div id="open-modal4" class="overlay shadow">
-          <a href="#organisations">
-            <button class="round"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100%"
-                height="100%"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-x"
-                ><line x1="18" y1="6" x2="6" y2="18"></line><line
-                  x1="6"
-                  y1="6"
-                  x2="18"
-                  y2="18"></line></svg
-              ></button
-            >
-          </a>
-          <div class="title-wrapper">
-            <h1 style="font-size: 2em;">Non Profits</h1>
-            <Image src={NonProfit} alt="Non Profits" />
-          </div>
-          <p>
-            A contemporary non-profit website is a crucial investment that
-            directly impacts an organization's mission and sustainability.
-          </p>
-          <p>
-            The primary reasons include credibility, usability, and fundraising
-            effectiveness. An outdated website immediately damages credibility,
-            because a non-mobile-friendly or slow site suggests the charity is
-            behind the times or poorly managed.
-          </p>
-          <p>
-            Importantly, a streamlined, secure donation process is
-            non-negotiable for maximizing contributions. Ultimately, a
-            non-profit website should serve as a powerful, dynamic tool for
-            engagement rather than a static digital brochure.
-          </p>
-        </div>
       </div>
-      <div class="image-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div id="open-modal4" class="overlay shadow">
+        <a href="#organisations">
+          <button class="round"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
+              ><line x1="18" y1="6" x2="6" y2="18"></line><line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"></line></svg
+            ></button
+          >
+        </a>
+        <div class="title-wrapper">
+          <h1 style="font-size: 2em;">Non Profits</h1>
+          <Image src={NonProfit} alt="Non Profits" />
+        </div>
+        <p>
+          A contemporary non-profit website is a crucial investment that
+          directly impacts an organization's mission and sustainability.
+        </p>
+        <p>
+          The primary reasons include credibility, usability, and fundraising
+          effectiveness. An outdated website immediately damages credibility,
+          because a non-mobile-friendly or slow site suggests the charity is
+          behind the times or poorly managed.
+        </p>
+        <p>
+          Importantly, a streamlined, secure donation process is non-negotiable
+          for maximizing contributions. Ultimately, a non-profit website should
+          serve as a powerful, dynamic tool for engagement rather than a static
+          digital brochure.
+        </p>
+      </div>
+      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={Producers} alt="Producers" />
         <p class="organisation-text">Producers</p>
+
         <a href="#open-modal5">
           <button class="round light_bg"
             ><svg
@@ -307,241 +311,261 @@ import Search from "../images/search.svg";
             ></button
           >
         </a>
-        <div id="open-modal5" class="overlay shadow">
-          <a href="#organisations">
-            <button class="round"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100%"
-                height="100%"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-x"
-                ><line x1="18" y1="6" x2="6" y2="18"></line><line
-                  x1="6"
-                  y1="6"
-                  x2="18"
-                  y2="18"></line></svg
-              ></button
-            >
-          </a>
-          <div class="title-wrapper">
-            <h1 style="font-size: 2em;">Producers</h1>
-            <Image src={Producers} alt="Producers" />
-          </div>
-          <p>
-            Modernising your producer website is a crucial step for maintaining
-            relevance and competitiveness.
-          </p>
-          <p>
-            This is because an outdated site is often slow, difficult to
-            navigate, and lacks mobile responsiveness, leading to high bounce
-            rates and lost opportunities.
-          </p>
-          <p>
-            Furthermore, a modern site ensures improved security, protecting
-            sensitive business and client data from contemporary cyber threats.
-            Visually, a fresh design is essential for maintaining brand
-            credibility and professionalism, signaling to potential partners and
-            customers that the company is forward-thinking.
-          </p>
-        </div>
       </div>
-      <div class="image-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div id="open-modal5" class="overlay shadow">
+        <a href="#organisations">
+          <button class="round"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
+              ><line x1="18" y1="6" x2="6" y2="18"></line><line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"></line></svg
+            ></button
+          >
+        </a>
+        <div class="title-wrapper">
+          <h1 style="font-size: 2em;">Producers</h1>
+          <Image src={Producers} alt="Producers" />
+        </div>
+        <p>
+          Modernising your producer website is a crucial step for maintaining
+          relevance and competitiveness.
+        </p>
+        <p>
+          This is because an outdated site is often slow, difficult to navigate,
+          and lacks mobile responsiveness, leading to high bounce rates and lost
+          opportunities.
+        </p>
+        <p>
+          Furthermore, a modern site ensures improved security, protecting
+          sensitive business and client data from contemporary cyber threats.
+          Visually, a fresh design is essential for maintaining brand
+          credibility and professionalism, signaling to potential partners and
+          customers that the company is forward-thinking.
+        </p>
+      </div>
+
+      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={Search} alt="Missing?" />
         <p class="organisation-text">Missing your Organisation?</p>
-        <p><a href="#">Please get in touch</a></p>
+        <p><a href="#contact">Please get in touch</a></p>
       </div>
+
+      <div class="curved-border">
+        <svg
+          class="curve"
+          viewBox="0 0 1440 133"
+          preserveAspectRatio="none"
+          style="background-color: #27363B;"
+        >
+          <g>
+            <path
+              id="path-3"
+              d="M-0,72s180-36.13230792814181 360-0 180-136.8176787775407 360-0 180-111.71350672592155 360-0 180-16.099548216277995 360-0 V144H-1440Z"
+              fill="#f5f5f5"></path>
+            <path
+              id="path-4"
+              d="M-0,72s180-111.8581060065802 360-0 180-15.871579969997365 360-0 180-129.00900851770052 360-0 180-123.53614958975476 360-0 V144H-1440Z"
+              fill="#f5f5f5"
+              style="opacity: 0;"></path>
+          </g>
+        </svg>
+      </div>
+
+      <style lang="scss">
+        .white {
+          color: var(--pure-neutral-light);
+        }
+        .teal {
+          color: var(--pure-accent-teal);
+        }
+        .org-wrapper {
+          padding: 4em 0;
+          text-align: center;
+        }
+        .overlay {
+          & button.round {
+            background: var(--pure-primary);
+            justify-self: left;
+          }
+          visibility: hidden;
+          opacity: 0;
+          pointer-events: none;
+          &:target {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+          }
+          transition: all 0.3s;
+          position: fixed;
+          z-index: 2;
+          width: 60%;
+          min-width: 310px;
+          max-width: 750px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          padding: 40px;
+          display: flex;
+          flex-direction: column;
+          background: var(--pure-neutral-light);
+          border-radius: 10px;
+          & .title-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          & p {
+            text-align: left;
+          }
+        }
+        .shadow {
+          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+        }
+        .title-wrapper img {
+          width: 100px;
+          height: 100px;
+        }
+        .section-wrapper {
+          position: relative;
+          background-color: var(--pure-primary);
+          padding: 0 0 0 0;
+          margin: 0;
+        }
+        .section-content {
+          width: 80%;
+          margin: auto;
+        }
+        .headline-wrapper {
+          padding-top: 3em;
+          > h1 {
+            align-content: center;
+            font-size: 4em;
+          }
+          > p {
+            align-content: center;
+          }
+        }
+        .org-frame {
+          margin-bottom: 2em;
+          & img {
+            width: 64px;
+            height: 64px;
+          }
+          & p > a {
+            color: var(--pure-accent-teal);
+            text-decoration: none;
+            font-weight: 600;
+          }
+        }
+        .organisation-text {
+          color: var(--pure-neutral-light);
+          font-family: "Playfair Display", serif;
+          font-weight: 700;
+        }
+        button.round {
+          border-radius: 9999px;
+
+          background: var(--pure-accent-teal);
+          color: var(--pure-neutral-light);
+          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+          border: none;
+          padding: 7px;
+          margin: 0;
+          width: 48px;
+          min-width: 48px;
+          height: 48px;
+          margin-top: 10px;
+          display: flex;
+
+          justify-self: center;
+        }
+        .light_bg {
+          background-color: var(--pure-accent-teal);
+        }
+        .curved-border {
+          position: relative;
+          background: var(--pure-secondary-bg);
+          padding-bottom: 8rem;
+        }
+        .curve {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-width: 100vw;
+          height: 132px;
+          color: var(--pure-primary-bg);
+        }
+        @media screen and (max-width: 768px) {
+          .headline-wrapper h1 {
+            font-size: 3em;
+          }
+          .curve {
+            height: 36px;
+          }
+          .curved-border {
+            padding-bottom: 2rem;
+          }
+        }
+      </style>
+      <script>
+        import { onScroll, animate, svg, linear, stagger } from "animejs";
+        const path3 = document.getElementById("path-3");
+        const path4 = document.getElementById("path-4");
+        function animateCurve() {
+          // Morph #path-1 into #path-2
+          animate(path3, {
+            d: svg.morphTo(path4),
+            ease: linear(0, "0.5 50%", "0.7 75%", 1),
+            duration: 3000,
+            alternate: true,
+            autoplay: onScroll({
+              container: "curved-border",
+              sync: 1,
+              enter: "max bottom",
+              leave: "min top",
+            }),
+          });
+        }
+        animateCurve();
+        function animateImagesSequentially() {
+          animate(".org-frame", {
+            // Select all images
+            // opacity: [0, 1], // Animate from opacity 0 to 1
+            y: [-100, 0],
+            scale: [0, 1],
+            duration: 800, // Duration of each individual fade in (ms)
+            delay: stagger(100, { start: 100 }),
+            // ease: "easeInOutQuad",
+            // ease: "InOutExpo",
+
+            autoplay: onScroll({
+              sync: "play pause pause reset",
+              // enter: "bottom top",
+              // leave: "top bottom",
+              enter: "bottom-=50 top",
+              leave: "top+=60 bottom",
+            }),
+            // loop: true, // Loop the animation
+            // direction: "alternate", // Reverse the animation back
+            // Optionally, add a loop delay or other properties
+            // loopDelay: 1000,
+          });
+        }
+        animateImagesSequentially();
+      </script>
     </div>
-  </section>
-  <div class="curved-border">
-    <svg
-      class="curve"
-      viewBox="0 0 1440 133"
-      preserveAspectRatio="none"
-      style="background-color: #27363B;"
-    >
-      <g>
-        <path
-          id="path-3"
-          d="M-0,72s180-36.13230792814181 360-0 180-136.8176787775407 360-0 180-111.71350672592155 360-0 180-16.099548216277995 360-0 V144H-1440Z"
-          fill="#fff"></path>
-        <path
-          id="path-4"
-          d="M-0,72s180-111.8581060065802 360-0 180-15.871579969997365 360-0 180-129.00900851770052 360-0 180-123.53614958975476 360-0 V144H-1440Z"
-          fill="#fff"
-          style="opacity: 0;"></path>
-      </g>
-    </svg>
   </div>
 </main>
-<style lang="scss">
-  .white {
-    color: var(--pure-neutral-light);
-  }
-  .teal {
-    color: var(--pure-accent-teal);
-  }
-  .image-wrapper {
-    padding: 4em 0;
-    text-align: center;
-  }
-  .overlay {
-    & button.round {
-      background: var(--pure-primary);
-      justify-self: left;
-    }
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    &:target {
-      visibility: visible;
-      opacity: 1;
-      pointer-events: auto;
-    }
-    transition: all 0.3s;
-    position: fixed;
-    z-index: 2;
-    width: 60%;
-    min-width: 310px;
-    max-width: 750px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-    // overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background: var(--pure-neutral-light);
-    border-radius: 10px;
-    & .title-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    & p {
-      text-align: left;
-    }
-  }
-  .shadow {
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-  }
-  .image-frame .title-wrapper img {
-    width: 100px;
-    height: 100px;
-  }
-  .section-wrapper {
-    position: relative;
-    background-color: var(--pure-primary);
-    padding: 0 0 0 0;
-    margin: 0;
-  }
-  .section-content {
-    // display: flex;
-    width: 80%;
-    margin: auto;
-  }
-  .headline-wrapper {
-    padding-top: 3em;
-    > h1 {
-      align-content: center;
-      font-size: 4em;
-    }
-    > p {
-      align-content: center;
-    }
-  }
-  .image-frame {
-    & img {
-      width: 64px;
-      height: 64px;
-    }
-    & p > a {
-      color: var(--pure-accent-teal);
-      text-decoration: none;
-      font-weight: 600;
-    }
-  }
-  .organisation-text {
-    color: var(--pure-neutral-light);
-    // opacity: 1;
-    font-family: "Playfair Display", serif;
-    font-weight: 700;
-    // font-size: 1em;
-  }
-  button.round {
-    border-radius: 9999px;
-
-    background: var(--pure-accent-teal);
-    color: var(--pure-neutral-light);
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-    border: none;
-    // font-family: grad, serif;
-    // font-weight: 400;
-    // font-style: italic;
-    padding: 7px;
-    margin: 0;
-    width: 48px;
-    min-width: 48px;
-    height: 48px;
-    margin-top: 10px;
-    display: flex;
-    // text-align: center;
-
-    justify-self: center;
-    // align-items: center;
-  }
-  .light_bg {
-    background-color: var(--pure-accent-teal);
-  }
-  .curved-border {
-    position: relative;
-    background: var(--pure-secondary-bg);
-    padding-bottom: 8rem;
-  }
-  .curve {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100vw;
-    height: 132px;
-    color: var(--pure-primary-bg);
-  }
-  @media screen and (max-width: 768px) {
-    .headline-wrapper h1 {
-      font-size: 3em;
-    }
-    .curve {
-      height: 36px;
-    }
-    .curved-border {
-      padding-bottom: 2rem;
-    }
-  }
-</style>
-<script>
-  import { onScroll, animate, svg, linear } from "animejs";
-  const path3 = document.getElementById("path-3");
-  const path4 = document.getElementById("path-4");
-  function animateCurve() {
-    // Morph #path-1 into #path-2
-    animate(path3, {
-      d: svg.morphTo(path4),
-      ease: linear(0, "0.5 50%", "0.7 75%", 1),
-      duration: 3000,
-      alternate: true,
-      autoplay: onScroll({
-        container: "curved-border",
-        sync: 1,
-        enter: "max bottom",
-        leave: "min top",
-      }),
-    });
-  }
-  animateCurve();
-</script>
