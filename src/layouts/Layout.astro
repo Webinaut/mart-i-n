@@ -7,7 +7,7 @@ import Organisation from "../components/Organisation.astro";
 import Contact from "../components/Contact.astro";
 import FAQ from "../components/FAQ.astro";
 import Footer from "../components/Footer.astro";
-const { pageTitle } = Astro.props;
+const { pageTitle, description } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,6 +17,7 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <meta name="description" content={description} />
   </head>
   <body>
     <Header />
