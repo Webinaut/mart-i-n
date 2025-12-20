@@ -398,7 +398,8 @@ import Search from "../images/search.svg";
   .overlay {
     & button.round {
       background: var(--pure-primary);
-      justify-self: left;
+      // justify-self: left;
+      margin: 0;
     }
     visibility: hidden;
     opacity: 0;
@@ -477,20 +478,19 @@ import Search from "../images/search.svg";
   }
   button.round {
     border-radius: 9999px;
-
     background: var(--pure-accent-teal);
     color: var(--pure-neutral-light);
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     border: none;
     padding: 7px;
-    margin: 0;
+    // margin: 0;
     width: 48px;
     min-width: 48px;
     height: 48px;
-    margin-top: 10px;
+    // margin-top: 10px;
     display: flex;
-
-    justify-self: center;
+    margin: 10px auto 0 auto;
+    // justify-self: center;
   }
   .light_bg {
     background-color: var(--pure-accent-teal);

@@ -165,17 +165,18 @@ const framedImages = [
   }
   .image-wrapper {
     position: relative;
-    margin: 3em auto 0 auto;
-    // width: 80%;
+    margin: 1em auto 0 auto;
     & .image-frame {
       text-align: center;
       > img {
         max-width: 80%;
         max-height: fit-content;
+        object-fit: contain;
       }
     }
 
     & .slide-image {
+      object-fit: contain;
       max-width: 80%;
       max-height: fit-content;
       position: absolute;
