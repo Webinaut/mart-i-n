@@ -1,4 +1,5 @@
 ---
+import Image from "astro/components/Image.astro";
 import Header_background from "../images/blobs-01.svg";
 import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
 ---
@@ -111,6 +112,7 @@ import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
       <a href="#why"><button class="mart-button-1">Learn more</button></a>
     </div>
     <div class="image-wrapper"></div>
+    <!-- <div class="image-wrapper"><Image src={Herobackground} alt="hero" /></div> -->
   </section>
 </main>
 <style lang="scss" define:vars={{ hbackground: `url(${Herobackground.src})` }}>
@@ -285,7 +287,7 @@ import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
 </style>
 
 <script>
-  import { onScroll, animate } from "animejs";
+  import { onScroll, animate, svg } from "animejs";
   function animateHero() {
     animate(".hero-content", {
       y: [0, 40],
@@ -299,5 +301,17 @@ import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
     });
   }
   animateHero();
+
+  function animateCircle() {
+    animate("#thinking-circle", {
+      cx: 400,
+      cy: 280,
+      duration: 1500,
+      loop: true, // Repeat indefinitely
+      direction: "alternate", // Reverse animation direction
+      easing: "easeInOutQuad", // Use a specific easing function
+    });
+  }
+  animateCircle();
 </script>
 <script src="../scripts/menu.js"></script>
