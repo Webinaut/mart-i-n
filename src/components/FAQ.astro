@@ -338,13 +338,13 @@
       opacity: [0, 1],
       // scale: [0, 1],
       // ease: "InOutExpo",
-      delay: stagger(500, {
-        start: 500,
+      delay: stagger(400, {
+        start: 100,
       }),
       autoplay: onScroll({
-        sync: "play pause pause reset",
-        enter: "bottom-=50 top",
-        leave: "top+=60 bottom",
+        sync: "play play pause reset",
+        enter: "max bottom",
+        leave: "min top",
       }),
     });
   }
