@@ -1,12 +1,20 @@
 ---
 import Image from "astro/components/Image.astro";
-import mountain from "../images/mountain.svg";
+import australia from "../images/australia-map-icon.svg";
+import linkedin from "../images/linkedin.svg";
+import facebook from "../images/facebook.svg";
+// import mountain from "../images/mountain.svg";
 ---
 
 <footer>
-  <Image src={mountain} alt="mountain" />
-  <p class="vic">Made in the Victorian High Country</p>
-  <p>Copyright &copy; 2025 Mart.I.N</p>
+  <Image src={australia} alt="Australia Icon" />
+  <p class="aus">Made with love in Australia</p>
+  <div class="social">
+    <Image src={linkedin} alt="linkedin" /><Image
+      src={facebook}
+      alt="facebook"
+    />
+  </div>
 </footer>
 <style lang="scss">
   footer {
@@ -14,9 +22,16 @@ import mountain from "../images/mountain.svg";
     text-align: center;
     min-height: 20vh;
     background-color: var(--pure-primary);
+    & .social {
+      display: flex;
+      justify-content: center;
+      & img {
+        margin: 10px 40px;
+      }
+    }
     & p {
       color: var(--pure-neutral-light);
-      &.vic {
+      &.aus {
         font-family: "Playfair Display, serif";
         font-size: 1.5em;
         font-style: oblique;
