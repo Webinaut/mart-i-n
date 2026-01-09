@@ -433,12 +433,15 @@ import Header_background from "../images/blobs-01.svg";
     animate("#thinking-circle", {
       cx: [460, 428.05798],
       cy: [230, 298.22423],
+      delay: 1000,
       duration: 1500,
       easing: "InOutExpo", // Use a specific easing function
       autoplay: onScroll({
         sync: "play reset play reset",
-        enter: "bottom-=100 top",
-        leave: "top bottom+=100",
+        enter: "bottom top",
+        leave: "top bottom",
+        //     enter: "bottom-=100 top",
+        //     leave: "top bottom+=100",
       }),
     });
   }
