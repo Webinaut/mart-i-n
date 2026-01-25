@@ -112,8 +112,8 @@ import Herobackground from "../images/MS-SVG-Prim-BG.svg";
       </p>
       <a href="#why"><button class="mart-button-1">Learn more</button></a>
     </div>
-    <div class="image-wrapper"></div>
-    <!-- <div class="image-wrapper"><Image src={Herobackground} alt="hero" /></div> -->
+    <div class="hero-image-wrapper"></div>
+    <!-- <div class="hero-image-wrapper"><Image src={Herobackground} alt="hero" /></div> -->
   </section>
 </main>
 <style lang="scss" define:vars={{ hbackground: `url(${Herobackground.src})` }}>
@@ -175,7 +175,7 @@ import Herobackground from "../images/MS-SVG-Prim-BG.svg";
     font-style: italic;
     margin-top: 40px;
   }
-  .image-wrapper {
+  .hero-image-wrapper {
     margin: 30px 40px 0 0;
     align-self: flex-start;
     width: 100%;
@@ -231,7 +231,7 @@ import Herobackground from "../images/MS-SVG-Prim-BG.svg";
     }
   }
   @media (max-width: 768px) {
-    .image-wrapper {
+    .hero-image-wrapper {
       display: none;
     }
     h1.logo {
@@ -303,16 +303,19 @@ import Herobackground from "../images/MS-SVG-Prim-BG.svg";
   }
   animateHero();
 
-  // function animateCircle() {
-  // animate("#thinking-circle", {
-  // cx: 400,
-  // cy: 280,
-  //  duration: 1500,
-  // loop: true, // Repeat indefinitely
-  //  direction: "alternate", // Reverse animation direction
-  //  easing: "easeInOutQuad", // Use a specific easing function
-  // });
-  // }
-  // animateCircle();
+  function animateHeroImage() {
+    animate(".hero-image-wrapper", {
+      duration: 2000,
+      opacity: [0, 1],
+      ease: "InOutExpo",
+      autoplay: onScroll({
+        sync: "play reset play reset",
+        // sync: "resume pause reverse reset",
+        enter: "bottom top",
+        leave: "top bottom",
+      }),
+    });
+  }
+  animateHeroImage();
 </script>
 <script src="../scripts/menu.js"></script>
