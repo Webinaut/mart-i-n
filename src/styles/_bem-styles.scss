@@ -1,0 +1,50 @@
+/**
+*
+* Component styles using BEM conventions
+* See: https://bem-cheat-sheet.9elements.com/
+*
+*/
+
+/* =====================================
+=               Buttons                =
+===================================== */
+.button__primary {
+  border-radius: 9999px;
+  padding: 15px;
+  min-width: 200px;
+  background: var(--pure-primary);
+  color: var(--pure-neutral-light);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+  border: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 40px;
+}
+.button__centered {
+  position: relative;
+  bottom: -20px;
+  text-align: center;
+}
+/* ========= End of Buttons ========= */
+
+/* =====================================
+=               Global Section Styles                
+===================================== */
+.section__wrapper {
+  position: relative;
+  background-color: var(--pure-primary-bg);
+  padding: 0 0 0 0;
+  margin: 0;
+}
+.section__content {
+  width: 80%;
+  margin: auto;
+  &--white-text {
+    color: var(--pure-neutral-light);
+  }
+  &--teal-text {
+    color: var(--pure-accent-teal);
+  }
+}
+/* ========= End of Global Section Styles ========= */

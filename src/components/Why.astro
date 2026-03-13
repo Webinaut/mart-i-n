@@ -1,5 +1,4 @@
 ---
-// import "../styles/main.scss";
 import Image from "astro/components/Image.astro";
 import Computerframe from "../images/computer.png";
 import slide1 from "../images/ranges.png";
@@ -17,62 +16,66 @@ const framedImages = [
     alt: "slide1",
     width: 1535,
     height: 955,
-    class: "slide-image",
+    class: "slider__slide",
   },
   {
     src: slide2,
     alt: "slide2",
     width: 1535,
     height: 955,
-    class: "slide-image",
+    class: "slider__slide",
   },
   {
     src: slide3,
     alt: "slide3",
     width: 1535,
     height: 955,
-    class: "slide-image",
+    class: "slider__slide",
   },
   {
     src: slide4,
     alt: "slide4",
     width: 1535,
     height: 955,
-    class: "slide-image",
+    class: "slider__slide",
   },
   {
     src: slide5,
     alt: "slide5",
     width: 1535,
     height: 955,
-    class: "slide-image",
+    class: "slider__slide",
   },
   {
     src: slide6,
     alt: "slide6",
     width: 1535,
     height: 955,
-    class: "slide-image",
+    class: "slider__slide",
   },
   {
     src: slide7,
     alt: "slide7",
     width: 1535,
     height: 955,
-    class: "slide-image",
+    class: "slider__slide",
   },
   {
     src: slide8,
     alt: "slide8",
     width: 1535,
     height: 955,
-    class: "slide-image",
+    class: "slider__slide",
   },
 ];
 ---
 
-<div class="curved-border">
-  <svg class="curve" viewBox="0 0 1440 133" preserveAspectRatio="none">
+<div class="curved-top-border">
+  <svg
+    class="curved-top-border__curve"
+    viewBox="0 0 1440 133"
+    preserveAspectRatio="none"
+  >
     <g>
       <path
         id="path-1"
@@ -86,26 +89,27 @@ const framedImages = [
     </g>
   </svg>
 </div>
-<main id="why" class="section-wrapper">
-  <section class="section-content">
-    <div class="headline-wrapper pure-g">
-      <h1 class="pure-u-md-2-5">
+<section class="section__wrapper">
+  <div id="why" class="section__content">
+    <div class="pure-g">
+      <!-- Pure CSS Grid (Actually Flex) -->
+      <h1 class="why__title pure-u-md-2-5">
+        <!-- Pure CSS two fifths on larger screens -->
         Why
-        <span class="white"
+        <span class="section__content--white-text"
           ><br />
           Revitalise?
         </span>
       </h1>
-      <p class="white pure-u-md-3-5">
-        A modern website encourages visitors to stay longer and find what they
-        need. A fresh look reinforces professionalism and relevance. It can
-        yield significant returns.
+      <p class="why__text section__content--white-text pure-u-md-3-5">
+        <!-- Pure CSS three fifths on larger screens -->
+        A modern website encourages visitors to stay longer and find what they need.
+        A fresh look reinforces professionalism and relevance. It can yield significant
+        returns.
       </p>
     </div>
-    <div class="image-wrapper">
-      <div class="image-frame">
-        <Image src={Computerframe} alt="Computer Frame" />
-      </div>
+    <div class="slider">
+      <Image src={Computerframe} alt="Computer Frame" class="slider__frame" />
       {
         framedImages.map((image) => (
           <Image
@@ -119,63 +123,45 @@ const framedImages = [
       }
     </div>
 
-    <div class="quote-button">
+    <div class="button__centered">
       <a href="https://onestopsites.net.au/portfolio/" target="_blank"
-        ><button class="mart-button-1">View Mart.I.N's Portfolio</button></a
+        ><button class="button__primary">View Mart.I.N's Portfolio</button></a
       >
     </div>
-  </section>
-</main>
+  </div>
+</section>
 <style lang="scss">
-  .white {
-    color: var(--pure-neutral-light);
-  }
-  .curved-border {
+  .curved-top-border {
     position: relative;
     background: var(--pure-secondary-bg);
     padding-bottom: 8rem;
-  }
-  .curve {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100vw;
-    height: 132px;
-    color: var(--pure-primary-bg);
-  }
-  .headline-wrapper {
-    > h1 {
-      align-content: center;
-      font-size: 4em;
-    }
-    > p {
-      align-content: center;
+    &__curve {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 100vw;
+      height: 132px;
+      color: var(--pure-primary-bg);
     }
   }
-  .section-wrapper {
-    position: relative;
-    background-color: var(--pure-primary-bg);
-    padding: 0 0 0 0;
-    margin: 0;
+  .why__title {
+    font-size: 4em;
   }
-  .section-content {
-    width: 80%;
-    margin: auto;
+  .why__text {
+    align-content: center;
   }
-  .image-wrapper {
+  .slider {
     position: relative;
     margin: 1em auto 0 auto;
-    & .image-frame {
-      text-align: center;
-      > img {
-        max-width: 80%;
-        max-height: fit-content;
-        object-fit: contain;
-      }
+    &__frame {
+      display: flex;
+      justify-self: center;
+      max-width: 80%;
+      max-height: fit-content;
+      object-fit: contain;
     }
-
-    & .slide-image {
+    &__slide {
       object-fit: contain;
       max-width: 80%;
       max-height: fit-content;
@@ -186,34 +172,17 @@ const framedImages = [
       opacity: 0;
     }
   }
-  .quote-button {
-    position: relative;
-    bottom: -20px;
-    text-align: center;
-  }
-  button.mart-button-1 {
-    border-radius: 9999px;
-    padding: 15px;
-    min-width: 200px;
-    background: var(--pure-primary);
-    color: var(--pure-neutral-light);
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-    border: none;
-    font-family: "Playfair Display", serif;
-    font-weight: 400;
-    font-style: italic;
-    margin-top: 40px;
-  }
+
   @media screen and (max-width: 768px) {
-    .image-wrapper .image-frame img,
-    .image-wrapper .slide-image {
-      max-width: 100%;
-    }
-    .curve {
-      height: 36px;
-    }
-    .curved-border {
+    .curved-top-border {
       padding-bottom: 2rem;
+      &__curve {
+        height: 36px;
+      }
+    }
+    .slider__frame,
+    .slider__slide {
+      max-width: 100%;
     }
   }
 </style>
@@ -239,7 +208,7 @@ const framedImages = [
   animateCurve();
 
   function animateImagesSequentially() {
-    animate(".slide-image", {
+    animate(".slider__slide", {
       // Select all images
       opacity: [0, 1], // Animate from opacity 0 to 1
       duration: 800, // Duration of each individual fade in (ms)

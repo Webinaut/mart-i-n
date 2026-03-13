@@ -1,38 +1,40 @@
 ---
 import Image from "astro/components/Image.astro";
 import Header_background from "../images/blobs-01.svg";
-import Herobackground from "../images/MS-SVG-Prim-BG.svg";
-// import Herobackground from "../images/undraw_code-thinking_0vf2.svg";
 ---
 
-<main class="section-wrapper">
-  <div class="hbackground">
+<header class="hero">
+  <div class="hero__background">
     <Header_background />
   </div>
-  <div class="hero">
-    <section class="hero-content">
-      <h1 class="logo">Mart.I.N</h1>
-      <nav class="hdr">
-        <ul>
-          <li>
-            <a href="https://onestopsites.net.au/" target="_blank"
-              >One Stop Sites</a
-            >
-          </li>
-          <li>
-            <a href="https://onestopsites.net.au/portfolio/" target="_blank"
-              >Portfolio</a
-            >
-          </li>
-          <li>
-            <a href="#faq">Questions</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="round" id="button-open"
+  <nav class="navbar">
+    <h1 class="navbar__logo">Mart.I.N</h1>
+    <button class="navbar__button navbar__button--open" id="menuOpen"
+      ><svg
+        xmlns="
+      http:
+      www.w3.org
+      2000
+      svg"
+        width="100%"
+        height="100%"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-menu"
+        ><line x1="3" y1="12" x2="21" y2="12"></line><line
+          x1="3"
+          y1="6"
+          x2="21"
+          y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg
+      >
+    </button>
+
+    <ul class="navbar__menu" id="navMenu">
+      <button class="navbar__button navbar__button--close" id="menuClose"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
@@ -43,268 +45,250 @@ import Herobackground from "../images/MS-SVG-Prim-BG.svg";
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="feather feather-menu"
-          ><line x1="3" y1="12" x2="21" y2="12"></line><line
-            x1="3"
+          class="feather feather-x"
+          ><line x1="18" y1="6" x2="6" y2="18"></line><line
+            x1="6"
             y1="6"
-            x2="21"
-            y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg
+            x2="18"
+            y2="18"></line></svg
         ></button
       >
-    </section>
-    <section>
-      <ul class="mobile-menu-wrapper" id="mobileMenu" style="">
-        <button class="round" id="button-close"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="100%"
-            height="100%"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-x"
-            ><line x1="18" y1="6" x2="6" y2="18"></line><line
-              x1="6"
-              y1="6"
-              x2="18"
-              y2="18"></line></svg
-          ></button
+      <li class="navbar__item">
+        <a
+          href="https://onestopsites.net.au/"
+          class="navbar__link"
+          target="_blank">One Stop Sites</a
         >
-        <ul>
-          <li>
-            <a href="https://onestopsites.net.au/" target="_blank"
-              ><h1>One Stop Sites</h1></a
-            >
-          </li>
-          <li>
-            <a href="https://onestopsites.net.au/portfolio/" target="_blank"
-              ><h1>Portfolio</h1></a
-            >
-          </li>
+      </li>
+      <li class="navbar__item">
+        <a
+          href="https://onestopsites.net.au/portfolio/"
+          class="navbar__link"
+          target="_blank">Portfolio</a
+        >
+      </li>
+      <li class="navbar__item">
+        <a href="#faq" class="navbar__link">Questions</a>
+      </li>
+      <li class="navbar__item">
+        <a href="#contact" class="navbar__link">Contact</a>
+      </li>
+    </ul>
+  </nav>
 
-          <li>
-            <a href="#faq" class="menu-link"><h1>Questions</h1></a>
-          </li>
-          <li>
-            <a href="#contact" class="menu-link"><h1>Contact</h1></a>
-          </li>
-        </ul>
-      </ul>
-    </section>
-  </div>
-  <section class="section-content hero">
-    <div class="section-wrapper">
-      <h1 class="herohead">
+  <div class="hero__content">
+    <div class="hero__text">
+      <h1 class="hero__title">
         <span style="color:var(--pure-accent-grey);">
           Revitalise
           <br /></span
         >
         <span style="color:var(--pure-secondary);">your website</span>
       </h1>
-      <p>
+      <p class="hero__text">
         Revitalising your website is essential for maintaining relevance and
         competitiveness in today's fast-paced digital world. A refresh allows
         you to adopt modern design principles, ensuring your site is fully
         responsive and delivers a seamless user experience across all devices.
       </p>
-      <a href="#why"><button class="mart-button-1">Learn more</button></a>
+      <a href="#why"><button class="button__primary">Learn more</button></a>
     </div>
-    <div class="hero-image-wrapper"></div>
-    <!-- <div class="hero-image-wrapper"><Image src={Herobackground} alt="hero" /></div> -->
-  </section>
-</main>
-<style lang="scss" define:vars={{ hbackground: `url(${Herobackground.src})` }}>
-  .hbackground {
-    top: 0px;
-    left: 0px;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
+    <div class="hero__image"></div>
+  </div>
+</header>
+<style lang="scss">
+  /**
+*
+* Component styles using BEM conventions
+* See: https://bem-cheat-sheet.9elements.com/
+*
+*/
   .hero {
     z-index: 2;
-  }
-  .section-content {
-    display: flex;
-    width: 80%;
-    margin: auto;
-  }
-  .section-wrapper {
-    // background: var(--pure-neutral-light);
     width: 100%;
     margin: 0 40px 0 0;
     padding: 20px 0;
-    // padding-bottom: 40px;
     display: block;
+    &__background {
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
+    &__title {
+      font-weight: 600;
+      font-size: 3.7rem;
+      line-height: 1.2em;
+    }
+    &__content {
+      display: flex;
+      width: 80%;
+      margin: auto;
+    }
+    &__text {
+      width: 100%;
+      margin: 0 40px 0 0;
+      padding: 20px 0;
+      display: block;
+    }
+    &__image {
+      margin: 30px 40px 0 0;
+      align-self: flex-start;
+      width: 100%;
+      height: 400px;
+      max-height: 400px;
+      min-width: 300px;
+      background-image: url("../images/MS-SVG-Prim-BG.svg");
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
   }
 
-  button.round {
-    border-radius: 9999px;
-    min-width: 200px;
-    background: var(--pure-primary);
-    color: var(--pure-neutral-light);
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-    border: none;
-    padding: 7px;
-    margin: 0;
-    width: 48px;
-    min-width: 48px;
-    height: 48px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-  }
-  .mobile-menu-wrapper {
-    display: none;
-  }
-  button.mart-button-1 {
-    border-radius: 9999px;
-    padding: 15px;
-    min-width: 200px;
-    background: var(--pure-primary);
-    color: var(--pure-neutral-light);
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-    border: none;
-    font-family: "Playfair Display", serif;
-    font-weight: 400;
-    font-style: italic;
-    margin-top: 40px;
-  }
-  .hero-image-wrapper {
-    margin: 30px 40px 0 0;
-    align-self: flex-start;
-    width: 100%;
-    height: 400px;
-    max-height: 400px;
-    min-width: 300px;
-    background-image: var(--hbackground);
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-  }
-  .hero-content {
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: start;
     width: 80%;
     margin: auto;
-    // margin-top: 60px;
-    // opacity: 0;
-  }
-  h1.logo {
-    display: flex;
-    margin-top: 0;
-    font-family: "Montserrat", sans-serif;
-    color: var(--pure-primary);
-    font-weight: 700;
-  }
-  .herohead {
-    font-weight: 600;
-    font-size: 3.7rem;
-    line-height: 1.2em;
-  }
-  nav {
-    width: 60%;
-    justify-items: end;
-    & ul {
+    &__logo {
+      display: flex;
+      margin-top: 0;
+      font-family: "Montserrat", sans-serif;
+      color: var(--pure-primary);
+      font-weight: 700;
+    }
+    &__menu {
       display: flex;
       justify-content: space-between;
       min-width: 300px;
       list-style-type: none;
-      & li {
-        margin-left: 2em;
+    }
+    &__item {
+      margin-left: 2em;
+    }
+    &__link {
+      color: var(--pure-neutral-dark);
+      text-decoration: none;
+      font-weight: 600;
+      &:hover {
+        color: var(--pure-accent-teal);
+        text-decoration: underline;
       }
-      & li a {
-        color: var(--pure-neutral-dark);
-        text-decoration: none;
-        font-weight: 600;
-        &:hover {
-          color: var(--pure-accent-teal);
-          text-decoration: underline;
-        }
-      }
+    }
+    // Mobile Hamburger Button
+    &__button--open,
+    &__button--close {
+      border-radius: 9999px;
+      min-width: 200px;
+      background: var(--pure-primary);
+      color: var(--pure-neutral-light);
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+      border: none;
+      padding: 7px;
+      margin: 0;
+      width: 48px;
+      min-width: 48px;
+      height: 48px;
+      margin-top: 10px;
+      justify-content: center;
+      align-items: center;
+      display: none;
     }
   }
   @media (max-width: 768px) {
-    .hero-image-wrapper {
-      display: none;
+    .hero {
+      &__image {
+        display: none;
+      }
+      &__title {
+        font-size: 2.4em;
+      }
+      &__text {
+        margin: 0;
+      }
     }
-    h1.logo {
-      font-size: 1.8em;
-    }
-    .herohead {
-      font-size: 2.4em;
-    }
-    .section-wrapper {
-      margin: 0;
-    }
-    nav {
-      display: none;
-    }
-    button.round {
-      display: flex;
-    }
-    #mobileMenu {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      width: 100vw;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: var(--pure-accent-teal);
-      z-index: 3;
-      &.open {
+    .navbar {
+      &__logo {
+        font-size: 1.8em;
+      }
+      &__menu {
+        display: none;
+      }
+      &__menu--is-open {
         display: flex;
-      }
-      & h1 {
-        font-size: 2.1em;
-      }
-      & ul {
-        list-style-type: none;
+        text-decoration: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
         padding: 0;
-
-        & li a {
-          color: var(--pure-neutral-light);
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--pure-accent-teal);
+        z-index: 3;
+        &__link {
+          color: var(--pure-neutral-dark);
           text-decoration: none;
           font-weight: 600;
-          font-size: 1.4em;
           &:hover {
-            color: var(--pure-primary);
+            color: var(--pure-accent-teal);
+            text-decoration: underline;
           }
+        }
+      }
+
+      &__button--open {
+        display: flex;
+      }
+      &__button--close {
+        display: flex;
+        margin-bottom: 2em;
+      }
+      &__item {
+        font-family:
+          Playfair Display,
+          serif;
+        font-size: 2em;
+        margin: 0.6em 0;
+      }
+      &__link {
+        color: var(--pure-neutral-light);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.4em;
+        &:hover {
+          color: var(--pure-primary);
         }
       }
     }
   }
 </style>
-
 <script>
   import { onScroll, animate, svg } from "animejs";
-  function animateHero() {
-    animate(".hero-content", {
-      y: [0, 40],
-      ease: "InOutExpo",
-      autoplay: onScroll({
-        sync: "play reset play reset",
-        // sync: "resume pause reverse reset",
-        enter: "bottom top",
-        leave: "top bottom",
-      }),
-    });
+  const mediaQuery = window.matchMedia("(min-width: 769px)");
+  function animateNav() {
+    if (mediaQuery.matches) {
+      animate(".navbar", {
+        y: [0, 40],
+        ease: "InOutExpo",
+        autoplay: onScroll({
+          sync: "play reset play reset",
+          // sync: "resume pause reverse reset",
+          enter: "bottom top",
+          leave: "top bottom",
+        }),
+      });
+    }
   }
-  animateHero();
+  animateNav();
 
   function animateHeroImage() {
-    animate(".hero-image-wrapper", {
+    animate(".hero__image", {
       duration: 2000,
       opacity: [0, 1],
       ease: "InOutExpo",
@@ -318,4 +302,30 @@ import Herobackground from "../images/MS-SVG-Prim-BG.svg";
   }
   animateHeroImage();
 </script>
-<script src="../scripts/menu.js"></script>
+
+<script lang="js">
+  /* Mobile Menu functionality using BEM classes
+===================================== */
+  const menuToggle = document.getElementById("menuOpen");
+  const menuClose = document.getElementById("menuClose");
+
+  const mobileMenu = document.getElementById("navMenu");
+
+  // Function to toggle menu
+  function toggleMenu() {
+    navMenu.classList.toggle("navbar__menu--is-open");
+  }
+
+  // Open on menuOpen Button
+  menuOpen.addEventListener("click", toggleMenu);
+
+  // Close on menuClose Button
+  menuClose.addEventListener("click", toggleMenu);
+
+  // Close on navbar__link clicked
+  mobileMenu.addEventListener("click", (event) => {
+    if (event.target.closest(".navbar__link")) {
+      toggleMenu();
+    }
+  });
+</script>

@@ -8,22 +8,24 @@ import NonProfit from "../images/non-profit.svg";
 import Search from "../images/search.svg";
 ---
 
-<main id="organisations" class="section-wrapper">
-  <div class="section-content">
-    <div class="headline-wrapper pure-g">
+<main id="organisations" class="section__wrapper">
+  <div class="section__content">
+    <div class="headline__wrapper pure-g">
+      <!-- Pure CSS Grid (Actually Flex) -->
       <h1 class="pure-u-md-1-2">
-        <span class="white">What type of <br /></span>
-        <span class="teal">Organisation?</span>
+        <!-- Pure CSS double on larger screens, single on mobile -->
+        <span class="section__content--white-text">What type of <br /></span>
+        <span class="section__content--teal-text">Organisation?</span>
       </h1>
-      <p class="white pure-u-md-1-2">
+      <p class="section__content--white-text pure-u-md-1-2">
         Find out how Mart.I.N helps organisations like yours.
       </p>
     </div>
-    <div class="org-wrapper pure-g">
-      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+    <div class="grid__wrapper pure-g">
+      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+        <!-- Pure CSS sixth on larger screens, 3 across on medium screens, double on mobile -->
         <Image src={Club} alt="Sports Clubs" />
         <p class="organisation-text">Sports Clubs</p>
-        <!-- <a class="btn" href="#open-modal"></a> -->
         <a href="#open-modal1">
           <button class="round light_bg"
             ><svg
@@ -87,7 +89,7 @@ import Search from "../images/search.svg";
         </p>
       </div>
 
-      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={Hospitality} alt="Hospitality" />
         <p class="organisation-text">Hospitality</p>
         <a href="#open-modal2">
@@ -155,7 +157,7 @@ import Search from "../images/search.svg";
           data with the latest security protocols.
         </p>
       </div>
-      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={Services} alt="Services" />
         <p class="organisation-text">Services</p>
 
@@ -225,7 +227,7 @@ import Search from "../images/search.svg";
           remain competitive and future-proof in the digital marketplace.
         </p>
       </div>
-      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={NonProfit} alt="Non Profits" />
         <p class="organisation-text">Non Profits</p>
 
@@ -290,7 +292,7 @@ import Search from "../images/search.svg";
           digital brochure.
         </p>
       </div>
-      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={Producers} alt="Producers" />
         <p class="organisation-text">Producers</p>
 
@@ -356,7 +358,7 @@ import Search from "../images/search.svg";
         </p>
       </div>
 
-      <div class="org-frame pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <Image src={Search} alt="Missing?" />
         <p class="organisation-text">Missing your Organisation?</p>
         <p><a href="#contact">Please get in touch</a></p>
@@ -385,15 +387,27 @@ import Search from "../images/search.svg";
   </div>
 </main>
 <style lang="scss">
-  .white {
-    color: var(--pure-neutral-light);
-  }
-  .teal {
-    color: var(--pure-accent-teal);
-  }
-  .org-wrapper {
+  // .white {
+  //   color: var(--pure-neutral-light);
+  // }
+  // .teal {
+  //   color: var(--pure-accent-teal);
+  // }
+  .grid__wrapper {
     padding: 4em 0;
     text-align: center;
+  }
+  .grid__cell {
+    margin-bottom: 2em;
+    & img {
+      width: 64px;
+      height: 64px;
+    }
+    & p > a {
+      color: var(--pure-accent-teal);
+      text-decoration: none;
+      font-weight: 600;
+    }
   }
   .overlay {
     & button.round {
@@ -439,17 +453,10 @@ import Search from "../images/search.svg";
     width: 100px;
     height: 100px;
   }
-  .section-wrapper {
-    position: relative;
+  .section__wrapper {
     background-color: var(--pure-primary);
-    padding: 0 0 0 0;
-    margin: 0;
   }
-  .section-content {
-    width: 80%;
-    margin: auto;
-  }
-  .headline-wrapper {
+  .headline__wrapper {
     padding-top: 3em;
     > h1 {
       align-content: center;
@@ -459,18 +466,7 @@ import Search from "../images/search.svg";
       align-content: center;
     }
   }
-  .org-frame {
-    margin-bottom: 2em;
-    & img {
-      width: 64px;
-      height: 64px;
-    }
-    & p > a {
-      color: var(--pure-accent-teal);
-      text-decoration: none;
-      font-weight: 600;
-    }
-  }
+
   .organisation-text {
     color: var(--pure-neutral-light);
     font-family: "Playfair Display", serif;
@@ -510,7 +506,7 @@ import Search from "../images/search.svg";
     color: var(--pure-primary-bg);
   }
   @media screen and (max-width: 768px) {
-    .headline-wrapper h1 {
+    .headline__wrapper h1 {
       font-size: 3em;
     }
     .curve {
@@ -542,27 +538,16 @@ import Search from "../images/search.svg";
   }
   animateCurve();
   function animateImagesSequentially() {
-    animate(".org-frame", {
-      // Select all images
-      // opacity: [0, 1], // Animate from opacity 0 to 1
+    animate(".grid__cell", {
       y: [-100, 0],
       scale: [0, 1],
       duration: 800, // Duration of each individual fade in (ms)
       delay: stagger(100, { start: 100 }),
-      // ease: "easeInOutQuad",
-      // ease: "InOutExpo",
-
       autoplay: onScroll({
         sync: "play play play reset",
-        // enter: "bottom top",
-        // leave: "top bottom",
         enter: "bottom-=50 top",
         leave: "top+=60 bottom",
       }),
-      // loop: true, // Loop the animation
-      // direction: "alternate", // Reverse the animation back
-      // Optionally, add a loop delay or other properties
-      // loopDelay: 1000,
     });
   }
   animateImagesSequentially();

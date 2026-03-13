@@ -6,47 +6,40 @@ import marketing from "../images/marketing.svg";
 import revenue from "../images/revenue.svg";
 ---
 
-<main class="section-wrapper">
-  <section class="section-content">
-    <div class="headline-wrapper">
-      <h1>The Benefits to You</h1>
-    </div>
-    <div class="pure-g">
-      <p class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-        <Image src={ui} alt="ui" /><br />Enhanced User Experience (UX)
-      </p>
-      <p class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-        <Image src={branding} alt="branding" /><br />Stronger Brand Perception &
-        Trust
-      </p>
-      <p class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-        <Image src={marketing} alt="marketing" /><br />Improved Marketing & SEO
-        Performance
-      </p>
-      <p class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-        <Image src={revenue} alt="revenue" /><br />Increased Conversions &
-        Revenue
-      </p>
-    </div>
-    <style lang="scss">
-      .section-wrapper {
-        padding-bottom: 60px;
-      }
-      .section-content {
-        width: 80%;
-        margin: auto;
-      }
-      .headline-wrapper > h1 {
-        text-align: center;
-        margin-top: 2em;
-        font-size: 3.6em;
-      }
-      .pure-g {
-        margin: 4em 0;
-        & p {
-          text-align: center;
-        }
-      }
-    </style>
-  </section>
-</main>
+<section class="section__wrapper section__content benefits">
+  <h1 class="benefits__title">The Benefits to You</h1>
+  <div class="pure-g">
+    <!-- Pure CSS Grid (Actually Flex) -->
+    <p class="benefits__text pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+      <Image src={ui} alt="ui" /><br />Enhanced User Experience (UX)
+    </p>
+    <p class="benefits__text pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+      <Image src={branding} alt="branding" /><br />Stronger Brand Perception &
+      Trust
+    </p>
+    <p class="benefits__text pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+      <Image src={marketing} alt="marketing" /><br />Improved Marketing & SEO
+      Performance
+    </p>
+    <p class="benefits__text pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+      <Image src={revenue} alt="revenue" /><br />Increased Conversions & Revenue
+    </p>
+  </div>
+</section>
+<style lang="scss">
+  .benefits {
+    background-color: unset;
+    padding-bottom: 60px;
+    &__title {
+      text-align: center;
+      margin-top: 2em;
+      font-size: 3.6em;
+    }
+    &__text {
+      text-align: center;
+    }
+  }
+  .pure-g {
+    margin: 4em 0;
+  }
+</style>
