@@ -8,26 +8,26 @@ import NonProfit from "../images/non-profit.svg";
 import Search from "../images/search.svg";
 ---
 
-<main id="organisations" class="section__wrapper">
+<section id="organisations" class="section__wrapper">
   <div class="section__content">
-    <div class="headline__wrapper pure-g">
+    <div class="org__header pure-g">
       <!-- Pure CSS Grid (Actually Flex) -->
-      <h1 class="pure-u-md-1-2">
+      <h1 class="org__title pure-u-md-1-2">
         <!-- Pure CSS double on larger screens, single on mobile -->
         <span class="section__content--white-text">What type of <br /></span>
         <span class="section__content--teal-text">Organisation?</span>
       </h1>
-      <p class="section__content--white-text pure-u-md-1-2">
+      <p class="org__text section__content--white-text pure-u-md-1-2">
         Find out how Mart.I.N helps organisations like yours.
       </p>
     </div>
-    <div class="grid__wrapper pure-g">
-      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+    <div class="org-card pure-g">
+      <div class="org-card__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
         <!-- Pure CSS sixth on larger screens, 3 across on medium screens, double on mobile -->
-        <Image src={Club} alt="Sports Clubs" />
-        <p class="organisation-text">Sports Clubs</p>
+        <Image src={Club} alt="Sports Clubs" class="org-card__icon" />
+        <p class="org-card__text">Sports Clubs</p>
         <a href="#open-modal1">
-          <button class="round light_bg"
+          <button class="org-card__button--open"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -44,9 +44,9 @@ import Search from "../images/search.svg";
           ></a
         >
       </div>
-      <div id="open-modal1" class="overlay shadow">
+      <div id="open-modal1" class="org-modal">
         <a href="#organisations">
-          <button class="round"
+          <button class="org-modal__button--close"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -66,34 +66,36 @@ import Search from "../images/search.svg";
             ></button
           >
         </a>
-        <div class="title-wrapper">
-          <h1 style="font-size: 2em;">Sports Clubs</h1>
-          <Image src={Club} alt="Sports Club" />
+        <div class="org-modal__header">
+          <h1 class="org-modal__title">Sports Clubs</h1>
+          <Image src={Club} alt="Sports Club" class="org-card__icon--large" />
         </div>
-        <p>
-          A modernised website is crucial for a sports club's success in the
-          digital age, extending far beyond a simple online brochure.
-        </p>
-        <p>
-          One primary reason is to enhance the member experience, making it
-          effortless for them to find schedules, check scores, enter
-          competitions or sign up for memberships on any device through a
-          responsive design.
-        </p>
-        <p>
-          In addition, a modern site leverages current SEO best practices,
-          driving organic traffic and increasing visibility to potential
-          sponsors and new recruits who are searching online. The up-to-date
-          security features and reliable hosting protect sensitive member data
-          and ensure the club's online operations run smoothly and securely.
-        </p>
+        <div class="org-modal__text">
+          <p>
+            A modernised website is crucial for a sports club's success in the
+            digital age, extending far beyond a simple online brochure.
+          </p>
+          <p>
+            One primary reason is to enhance the member experience, making it
+            effortless for them to find schedules, check scores, enter
+            competitions or sign up for memberships on any device through a
+            responsive design.
+          </p>
+          <p>
+            In addition, a modern site leverages current SEO best practices,
+            driving organic traffic and increasing visibility to potential
+            sponsors and new recruits who are searching online. The up-to-date
+            security features and reliable hosting protect sensitive member data
+            and ensure the club's online operations run smoothly and securely.
+          </p>
+        </div>
       </div>
 
-      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
-        <Image src={Hospitality} alt="Hospitality" />
-        <p class="organisation-text">Hospitality</p>
+      <div class="org-card__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+        <Image src={Hospitality} alt="Hospitality" class="org-card__icon" />
+        <p class="org-card__text">Hospitality</p>
         <a href="#open-modal2">
-          <button class="round light_bg"
+          <button class="org-card__button--open"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -110,9 +112,9 @@ import Search from "../images/search.svg";
           >
         </a>
       </div>
-      <div id="open-modal2" class="overlay shadow">
+      <div id="open-modal2" class="org-modal">
         <a href="#organisations">
-          <button class="round"
+          <button class="org-modal__button--close"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -132,37 +134,42 @@ import Search from "../images/search.svg";
             ></button
           >
         </a>
-        <div class="title-wrapper">
-          <h1 style="font-size: 2em;">Hospitality</h1>
-          <Image src={Hospitality} alt="Hospitality" />
+        <div class="org-modal__header">
+          <h1 class="org-modal__title">Hospitality</h1>
+          <Image
+            src={Hospitality}
+            alt="Hospitality"
+            class="org-card__icon--large"
+          />
         </div>
-        <p>
-          Revamping your hospitality website is essential for commercial
-          success. In particular, it is crucial to ensure a seamless and
-          intuitive mobile experience, as the majority of potential customers
-          browse and make decisions on their smartphones.
-        </p>
-        <p>
-          Secondly, a contemporary design signals professionalism and relevance,
-          directly reflecting the quality and experience of your restaurant; a
-          dated website can suggest that your establishment is similarly behind
-          the times.
-        </p>
-        <p>
-          A modern site should be built for conversion, featuring clear
-          calls-to-action for online reservations and easy access to the menu,
-          often integrating directly with modern POS or booking systems. Also,
-          updating the site is essential for SEO and security, ensuring it ranks
-          well in local searches and protects both your business and customer
-          data with the latest security protocols.
-        </p>
+        <div class="org-modal__text">
+          <p>
+            Revamping your hospitality website is essential for commercial
+            success. In particular, it is crucial to ensure a seamless and
+            intuitive mobile experience, as the majority of potential customers
+            browse and make decisions on their smartphones.
+          </p>
+          <p>
+            Secondly, a contemporary design signals professionalism and
+            relevance, directly reflecting the quality and experience of your
+            restaurant; a dated website can suggest that your establishment is
+            similarly behind the times.
+          </p>
+          <p>
+            A modern site should be built for conversion, featuring clear
+            calls-to-action for online reservations and easy access to the menu,
+            often integrating directly with modern POS or booking systems. Also,
+            updating the site is essential for SEO and security, ensuring it
+            ranks well in local searches and protects both your business and
+            customer data with the latest security protocols.
+          </p>
+        </div>
       </div>
-      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
-        <Image src={Services} alt="Services" />
-        <p class="organisation-text">Services</p>
-
+      <div class="org-card__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+        <Image src={Services} alt="Services" class="org-card__icon" />
+        <p class="org-card__text">Services</p>
         <a href="#open-modal3">
-          <button class="round light_bg"
+          <button class="org-card__button--open"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -179,9 +186,9 @@ import Search from "../images/search.svg";
           >
         </a>
       </div>
-      <div id="open-modal3" class="overlay shadow">
+      <div id="open-modal3" class="org-modal">
         <a href="#organisations">
-          <button class="round"
+          <button class="org-modal__button--close"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -201,38 +208,40 @@ import Search from "../images/search.svg";
             ></button
           >
         </a>
-        <div class="title-wrapper">
-          <h1 style="font-size: 2em;">Services</h1>
-          <Image src={Services} alt="Services" />
+        <div class="org-modal__header">
+          <h1 class="org-modal__title">Services</h1>
+          <Image src={Services} alt="Services" class="org-card__icon--large" />
         </div>
-        <p>
-          Modernising a services website is no longer a luxury but a critical
-          business necessity driven by evolving customer expectations and
-          technological advancements.
-        </p>
-        <p>
-          The main reason is the immediate impact on the Total Customer
-          Experience. An outdated, slow, or non-mobile-friendly site frustrates
-          visitors, leading to high bounce rates and lost business
-          opportunities.
-        </p>
-        <p>
-          Also, legacy platforms are often plagued by security vulnerabilities
-          and compliance issues, exposing the business and its client data to
-          substantial risk.
-        </p>
-        <p>
-          Ultimately, this strategic investment reduces long-term maintenance
-          costs and technical debt, ensuring that you, as a service provider,
-          remain competitive and future-proof in the digital marketplace.
-        </p>
+        <div class="org-modal__text">
+          <p>
+            Modernising a services website is no longer a luxury but a critical
+            business necessity driven by evolving customer expectations and
+            technological advancements.
+          </p>
+          <p>
+            The main reason is the immediate impact on the Total Customer
+            Experience. An outdated, slow, or non-mobile-friendly site
+            frustrates visitors, leading to high bounce rates and lost business
+            opportunities.
+          </p>
+          <p>
+            Also, legacy platforms are often plagued by security vulnerabilities
+            and compliance issues, exposing the business and its client data to
+            substantial risk.
+          </p>
+          <p>
+            Ultimately, this strategic investment reduces long-term maintenance
+            costs and technical debt, ensuring that you, as a service provider,
+            remain competitive and future-proof in the digital marketplace.
+          </p>
+        </div>
       </div>
-      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
-        <Image src={NonProfit} alt="Non Profits" />
-        <p class="organisation-text">Non Profits</p>
+      <div class="org-card__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+        <Image src={NonProfit} alt="Non Profits" class="org-card__icon" />
+        <p class="org-card__text">Non Profits</p>
 
         <a href="#open-modal4">
-          <button class="round light_bg"
+          <button class="org-card__button--open"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -249,9 +258,9 @@ import Search from "../images/search.svg";
           >
         </a>
       </div>
-      <div id="open-modal4" class="overlay shadow">
+      <div id="open-modal4" class="org-modal">
         <a href="#organisations">
-          <button class="round"
+          <button class="org-modal__button--close"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -271,33 +280,39 @@ import Search from "../images/search.svg";
             ></button
           >
         </a>
-        <div class="title-wrapper">
-          <h1 style="font-size: 2em;">Non Profits</h1>
-          <Image src={NonProfit} alt="Non Profits" />
+        <div class="org-modal__header">
+          <h1 class="org-modal__title">Non Profits</h1>
+          <Image
+            src={NonProfit}
+            alt="Non Profits"
+            class="org-card__icon--large"
+          />
         </div>
-        <p>
-          A contemporary non-profit website is a crucial investment that
-          directly impacts an organization's mission and sustainability.
-        </p>
-        <p>
-          The primary reasons include credibility, usability, and fundraising
-          effectiveness. An outdated website immediately damages credibility,
-          because a non-mobile-friendly or slow site suggests the charity is
-          behind the times or poorly managed.
-        </p>
-        <p>
-          Importantly, a streamlined, secure donation process is non-negotiable
-          for maximizing contributions. Ultimately, a non-profit website should
-          serve as a powerful, dynamic tool for engagement rather than a static
-          digital brochure.
-        </p>
+        <div class="org-modal__text">
+          <p>
+            A contemporary non-profit website is a crucial investment that
+            directly impacts an organization's mission and sustainability.
+          </p>
+          <p>
+            The primary reasons include credibility, usability, and fundraising
+            effectiveness. An outdated website immediately damages credibility,
+            because a non-mobile-friendly or slow site suggests the charity is
+            behind the times or poorly managed.
+          </p>
+          <p>
+            Importantly, a streamlined, secure donation process is
+            non-negotiable for maximizing contributions. Ultimately, a
+            non-profit website should serve as a powerful, dynamic tool for
+            engagement rather than a static digital brochure.
+          </p>
+        </div>
       </div>
-      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
-        <Image src={Producers} alt="Producers" />
-        <p class="organisation-text">Producers</p>
+      <div class="org-card__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+        <Image src={Producers} alt="Producers" class="org-card__icon" />
+        <p class="org-card__text">Producers</p>
 
         <a href="#open-modal5">
-          <button class="round light_bg"
+          <button class="org-card__button--open"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -314,9 +329,9 @@ import Search from "../images/search.svg";
           >
         </a>
       </div>
-      <div id="open-modal5" class="overlay shadow">
+      <div id="open-modal5" class="org-modal">
         <a href="#organisations">
-          <button class="round"
+          <button class="org-modal__button--close"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"
@@ -336,38 +351,44 @@ import Search from "../images/search.svg";
             ></button
           >
         </a>
-        <div class="title-wrapper">
-          <h1 style="font-size: 2em;">Producers</h1>
-          <Image src={Producers} alt="Producers" />
+        <div class="org-modal__header">
+          <h1 class="org-modal__title">Producers</h1>
+          <Image
+            src={Producers}
+            alt="Producers"
+            class="org-card__icon--large"
+          />
         </div>
-        <p>
-          Modernising your producer website is a crucial step for maintaining
-          relevance and competitiveness.
-        </p>
-        <p>
-          This is because an outdated site is often slow, difficult to navigate,
-          and lacks mobile responsiveness, leading to high bounce rates and lost
-          opportunities.
-        </p>
-        <p>
-          Furthermore, a modern site ensures improved security, protecting
-          sensitive business and client data from contemporary cyber threats.
-          Visually, a fresh design is essential for maintaining brand
-          credibility and professionalism, signaling to potential partners and
-          customers that the company is forward-thinking.
-        </p>
+        <div class="org-modal__text">
+          <p>
+            Modernising your producer website is a crucial step for maintaining
+            relevance and competitiveness.
+          </p>
+          <p>
+            This is because an outdated site is often slow, difficult to
+            navigate, and lacks mobile responsiveness, leading to high bounce
+            rates and lost opportunities.
+          </p>
+          <p>
+            Furthermore, a modern site ensures improved security, protecting
+            sensitive business and client data from contemporary cyber threats.
+            Visually, a fresh design is essential for maintaining brand
+            credibility and professionalism, signaling to potential partners and
+            customers that the company is forward-thinking.
+          </p>
+        </div>
       </div>
 
-      <div class="grid__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
-        <Image src={Search} alt="Missing?" />
-        <p class="organisation-text">Missing your Organisation?</p>
-        <p><a href="#contact">Please get in touch</a></p>
+      <div class="org-card__cell pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-6">
+        <Image src={Search} alt="Missing?" class="org-card__icon" />
+        <p class="org-card__text">Missing your Organisation?</p>
+        <p><a href="#contact" class="org-card__link">Please get in touch</a></p>
       </div>
     </div>
   </div>
-  <div class="curved-border">
+  <div class="curved-bottom-border">
     <svg
-      class="curve"
+      class="curved-bottom-border__curve"
       viewBox="0 0 1440 133"
       preserveAspectRatio="none"
       style="background-color: #27363B;"
@@ -385,44 +406,64 @@ import Search from "../images/search.svg";
       </g>
     </svg>
   </div>
-</main>
+</section>
 <style lang="scss">
-  // .white {
-  //   color: var(--pure-neutral-light);
-  // }
-  // .teal {
-  //   color: var(--pure-accent-teal);
-  // }
-  .grid__wrapper {
+  .section__wrapper {
+    background-color: var(--pure-primary);
+  }
+  .org__header {
+    padding-top: 3em;
+  }
+  .org__title {
+    align-content: center;
+    font-size: 4em;
+  }
+  .org__text {
+    align-content: center;
+  }
+  .org-card {
     padding: 4em 0;
     text-align: center;
-  }
-  .grid__cell {
-    margin-bottom: 2em;
-    & img {
+    &__cell {
+      margin-bottom: 2em;
+    }
+    &__icon {
       width: 64px;
       height: 64px;
+      &--large {
+        width: 100px;
+        height: 100px;
+      }
     }
-    & p > a {
+    &__link {
       color: var(--pure-accent-teal);
       text-decoration: none;
       font-weight: 600;
     }
-  }
-  .overlay {
-    & button.round {
-      background: var(--pure-primary);
-      // justify-self: left;
-      margin: 0;
+    &__text {
+      color: var(--pure-neutral-light);
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
     }
+    &__button--open {
+      border-radius: 9999px;
+      background: var(--pure-accent-teal);
+      color: var(--pure-neutral-light);
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+      border: none;
+      padding: 7px;
+      width: 48px;
+      min-width: 48px;
+      height: 48px;
+      display: flex;
+      margin: 10px auto 0 auto;
+    }
+  }
+  .org-modal {
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    &:target {
-      visibility: visible;
-      opacity: 1;
-      pointer-events: auto;
-    }
     transition: all 0.3s;
     position: fixed;
     z-index: 2;
@@ -437,83 +478,59 @@ import Search from "../images/search.svg";
     flex-direction: column;
     background: var(--pure-neutral-light);
     border-radius: 10px;
-    & .title-wrapper {
+    &:target {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    &__header {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    & p {
+    &__title {
+      font-size: 2em;
+    }
+    &__text {
+      text-align: left;
+    }
+    &__button--close {
+      border-radius: 9999px;
+      background: var(--pure-primary);
+      color: var(--pure-neutral-light);
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+      border: none;
+      padding: 7px;
+      width: 48px;
+      min-width: 48px;
+      height: 48px;
+      display: flex;
       text-align: left;
     }
   }
-  .shadow {
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-  }
-  .title-wrapper img {
-    width: 100px;
-    height: 100px;
-  }
-  .section__wrapper {
-    background-color: var(--pure-primary);
-  }
-  .headline__wrapper {
-    padding-top: 3em;
-    > h1 {
-      align-content: center;
-      font-size: 4em;
-    }
-    > p {
-      align-content: center;
-    }
-  }
-
-  .organisation-text {
-    color: var(--pure-neutral-light);
-    font-family: "Playfair Display", serif;
-    font-weight: 700;
-  }
-  button.round {
-    border-radius: 9999px;
-    background: var(--pure-accent-teal);
-    color: var(--pure-neutral-light);
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-    border: none;
-    padding: 7px;
-    // margin: 0;
-    width: 48px;
-    min-width: 48px;
-    height: 48px;
-    // margin-top: 10px;
-    display: flex;
-    margin: 10px auto 0 auto;
-    // justify-self: center;
-  }
-  .light_bg {
-    background-color: var(--pure-accent-teal);
-  }
-  .curved-border {
+  .curved-bottom-border {
     position: relative;
     background: var(--pure-secondary-bg);
     padding-bottom: 8rem;
-  }
-  .curve {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100vw;
-    height: 132px;
-    color: var(--pure-primary-bg);
+    &__curve {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 100vw;
+      height: 132px;
+      color: var(--pure-primary-bg);
+    }
   }
   @media screen and (max-width: 768px) {
-    .headline__wrapper h1 {
+    .org__title {
       font-size: 3em;
     }
-    .curve {
-      height: 36px;
-    }
-    .curved-border {
+    .curved-bottom-border {
       padding-bottom: 2rem;
+      &__curve {
+        height: 36px;
+      }
     }
   }
 </style>
@@ -529,7 +546,7 @@ import Search from "../images/search.svg";
       duration: 3000,
       alternate: true,
       autoplay: onScroll({
-        container: "curved-border",
+        container: "curved-bottom-border",
         sync: 1,
         enter: "max bottom",
         leave: "min top",
@@ -538,7 +555,7 @@ import Search from "../images/search.svg";
   }
   animateCurve();
   function animateImagesSequentially() {
-    animate(".grid__cell", {
+    animate(".org-card__cell", {
       y: [-100, 0],
       scale: [0, 1],
       duration: 800, // Duration of each individual fade in (ms)
