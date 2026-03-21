@@ -2,15 +2,13 @@
 
 ---
 
-<main class="section-wrapper" id="contact">
-  <section class="section-content">
-    <div class="headline-wrapper headline2">
-      <h1>
-        Get in touch
-        <br />
-        <span class="light">to get started</span>
-      </h1>
-    </div>
+<section class="section__wrapper" id="contact">
+  <section class="section__content">
+    <h1 class="contact__title">
+      Get in touch
+      <br />
+      <span class="section__content--teal-text">to get started</span>
+    </h1>
     <form
       name="contact"
       method="POST"
@@ -78,35 +76,26 @@
             <div data-netlify-recaptcha="true"></div>
           </div>
         </div>
-        <button type="submit" class="">Send</button>
+        <button type="submit" class="button__primary button__primary--teal"
+          >Send</button
+        >
       </div>
     </form>
   </section>
 
   <style>
-    .section-wrapper {
+    .section__wrapper {
+      background-color: unset;
       padding-bottom: 100px;
     }
-    .section-content {
-      width: 80%;
-      margin: auto;
-    }
-    .headline-wrapper {
-      display: flex;
+    .contact__title {
       margin-bottom: 1em;
-      margin-top: -5px;
-      padding-top: 2em;
-      /* opacity: 0; */
+      padding-top: 0.5em;
       transition: all 0.5s;
-      & h1 {
-        font-weight: 700;
-        font-size: 4em;
-        font-style: normal;
-        line-height: 1.4em;
-      }
-    }
-    .light {
-      color: var(--pure-accent-teal);
+      font-weight: 700;
+      font-size: 4em;
+      font-style: normal;
+      line-height: 1.4em;
     }
     input,
     .message,
@@ -124,25 +113,8 @@
         outline: none;
       }
     }
-
-    button {
-      background: var(--pure-accent-teal);
-      color: var(--pure-neutral-light);
-      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
-      border: none;
-      font-family: "Playfair Display", serif;
-      font-weight: 400;
-      font-style: italic;
-      padding: 15px;
-      min-width: 200px;
-      width: 40%;
-      align-self: flex-end;
-      border-radius: 9999px;
-      min-width: 200px;
-      margin-top: 40px;
-    }
     .hidden {
       display: none;
     }
   </style>
-</main>
+</section>

@@ -4,11 +4,14 @@
 
 <section class="section__wrapper">
   <section id="faq" class="section__content">
+    <!-- <div class="headline-wrapper"> -->
     <h1 class="faq__title">
       <span class="section__content--dark-text">Find the answers<br /></span>
       <span class="section__content--white-text">to your questions</span>
     </h1>
-    <div class="faq__question">
+    <!-- </div> -->
+    <!-- <div class="faq-wrapper"> -->
+    <div class="faq">
       <div class="question__header">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +30,9 @@
         <h5 class="question__text">
           We have a Facebook page. Why do we need a professional website?
         </h5>
-        <h5 class="answer__text">
+      </div>
+      <div class="question-content">
+        <h5 class="answer">
           Relying solely on a social media platform is a bit like building a
           house on rented land - you don’t actually own the property, and the
           landlord can change the rules at any time. Having a professional
@@ -35,7 +40,7 @@
         </h5>
       </div>
     </div>
-    <div class="faq__question">
+    <div class="faq">
       <div class="question__header">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +59,9 @@
         <h5 class="question__text">
           Why can’t I just do it myself using a website builder?
         </h5>
-        <h5 class="answer__text">
+      </div>
+      <div class="question-content">
+        <h5 class="answer">
           You absolutely can build your own website using tools like
           Squarespace, Wix, or Shopify.<br />However, the "DIY vs. Professional"
           debate isn't just about whether you can do it - it’s about the
@@ -66,7 +73,7 @@
         </h5>
       </div>
     </div>
-    <div class="faq__question">
+    <div class="faq">
       <div class="question__header">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -86,14 +93,16 @@
           I have seen a website design I like. Can you build something similar
           for me?
         </h5>
-        <h5 class="answer__text">
+      </div>
+      <div class="question-content">
+        <h5 class="answer">
           Absolutely! If you describe the website or share specific details
           about it, I can identify and replicate the layout, reverse-engineer
           its features and match its fonts and colours.
         </h5>
       </div>
     </div>
-    <div class="faq__question">
+    <div class="faq">
       <div class="question__header">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +121,9 @@
         <h5 class="question__text">
           What is the cost of designing and building a modern website?
         </h5>
-        <h5 class="answer__text">
+      </div>
+      <div class="question-content">
+        <h5 class="answer">
           When hiring a professional to build a modern, bespoke website for you,
           you are paying for expertise and time.<br />The cost will depend
           entirely on whether you are building a simple digital business card or
@@ -122,7 +133,7 @@
         </h5>
       </div>
     </div>
-    <div class="faq__question">
+    <div class="faq">
       <div class="question__header">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -141,8 +152,9 @@
         <h5 class="question__text">
           How long does it take to complete a typical project?
         </h5>
-
-        <h5 class="answer__text">
+      </div>
+      <div class="question-content">
+        <h5 class="answer">
           Typically, a one-page website takes 1 to 2 weeks to complete, although
           I have built some faster than that.
           <br />A website with 6 to 8 pages normally takes 4 to 6 weeks to go
@@ -152,7 +164,7 @@
         </h5>
       </div>
     </div>
-    <div class="faq__question">
+    <div class="faq">
       <div class="question__header">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +181,9 @@
           <line x1="5" y1="12" x2="19" y2="12" class=""></line></svg
         >
         <h5 class="question__text">What content do I need to provide?</h5>
-        <h5 class="answer__text">
+      </div>
+      <div class="question-content">
+        <h5 class="answer">
           Essentially two things – the words and the assets.<br />The words
           include both text for the pages and things like captions for photos.<br
           />The assets include good quality photos and documents such as
@@ -177,7 +191,7 @@
         </h5>
       </div>
     </div>
-    <div class="faq__question">
+    <div class="faq">
       <div class="question__header">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +210,9 @@
         <h5 class="question__text">
           Do you offer support and maintenance after launch?
         </h5>
-        <h5 class="answer__text">
+      </div>
+      <div class="question-content">
+        <h5 class="answer">
           All projects include free support and maintenance for a short period
           to fix any bugs or issues that may arise immediately after launch.<br
           />
@@ -206,7 +222,7 @@
         </h5>
       </div>
     </div>
-    <div class="faq__question">
+    <div class="faq">
       <div class="question__header">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +239,9 @@
           <line x1="5" y1="12" x2="19" y2="12" class=""></line></svg
         >
         <h5 class="question__text">Will my information be safe?</h5>
-        <h5 class="answer__text">
+      </div>
+      <div class="question-content">
+        <h5 class="answer">
           Website security is no longer a "luxury" feature—it is a standard
           requirement.<br />While no system on the internet is 100% unhackable,
           a modern professional website is significantly more secure than a
@@ -233,6 +251,7 @@
         </h5>
       </div>
     </div>
+    <!-- </div> -->
   </section>
 </section>
 
@@ -252,6 +271,7 @@
   }
   .question {
     &__header {
+      font-size: 1.2em;
       display: flex;
       flex-wrap: wrap;
       cursor: pointer;
@@ -265,35 +285,33 @@
     &__text {
       margin-left: 0.5em;
       font-family: "Montserrat", sans-serif;
-      font-size: 1.2em;
-      font-weight: 500;
-      line-height: 1.5em;
     }
   }
-  .answer__text {
+  .faq .question-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .faq.active .question-content {
+    max-height: 500px;
+  }
+  .faq.active .question__header > svg {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  h5.answer {
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     font-weight: normal;
     margin-top: 0.5em;
     color: var(--pure-neutral-light);
     line-height: 1.5em;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    display: none;
-  }
-  .faq__question--active .answer__text {
-    display: flex;
-    max-height: 500px;
-  }
-  .faq__question--active .question__icon {
-    transform: rotate(45deg);
-    transition: transform 0.3s ease;
   }
 </style>
 <script>
   import { onScroll, animate, stagger } from "animejs";
   function animateFAQ() {
-    animate(".faq__question", {
+    animate(".faq", {
       y: [50, 0],
       opacity: [0, 1],
       // scale: [0, 1],
@@ -314,16 +332,17 @@
   document.addEventListener("click", (e) => {
     const button = (e.target as Element).closest(".question__header");
     if (button) {
-      const accordionItem = button.closest(".faq__question");
-      const allItems = document.querySelectorAll(".faq__question");
+      const accordionItem = button.closest(".faq");
+      const allItems = document.querySelectorAll(".faq");
 
       allItems.forEach((item) => {
         if (item !== accordionItem) {
-          item.classList.remove("faq__question--active");
+          item.classList.remove("active");
         }
       });
 
-      accordionItem.classList.toggle("faq__question--active");
+      accordionItem.classList.toggle("active");
+      console.log(accordionItem.classList);
     }
   });
 </script>

@@ -20,6 +20,10 @@
   font-weight: 400;
   font-style: italic;
   margin-top: 40px;
+  &--teal {
+    background: var(--pure-accent-teal);
+    width: 40%;
+  }
 }
 .button__centered {
   position: relative;
@@ -45,6 +49,9 @@
   }
   &--teal-text {
     color: var(--pure-accent-teal);
+  }
+  &--dark-text {
+    color: var(--pure-secondary);
   }
 }
 /* ========= End of Global Section Styles ========= */
