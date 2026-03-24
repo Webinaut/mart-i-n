@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "animejs": "^4.2.2",
-    "astro": "^5.15.5",
+    "astro": "^6.0.8",
     "normalize.css": "^8.0.1",
     "purecss-sass": "^3.0.1",
     "sass": "^1.94.0"
