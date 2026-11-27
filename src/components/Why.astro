@@ -188,8 +188,8 @@ const framedImages = [
 </style>
 <script>
   import { onScroll, animate, svg, stagger, linear } from "animejs";
-  const path1 = document.getElementById("path-1");
-  const path2 = document.getElementById("path-2");
+  const path1 = document.getElementById("path-1")!;
+  const path2 = document.getElementById("path-2")!;
   function animateCurve() {
     // Morph #path-1 into #path-2
     animate(path1, {
